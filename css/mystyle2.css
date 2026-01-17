@@ -1,0 +1,315 @@
+
+@media screen and (max-width: 1024px){
+    
+    .navssbar{
+        display:none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .home-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home-text h1{
+        font-weight: bold;
+        font-size:2.5rem;
+        letter-spacing: 0.1rem;
+    }
+    .home-text p{
+        font-size: 1rem;
+        color:#dfe5e8;
+        line-height: 1.6;
+        font-weight: 400;
+    }
+
+    .btns a{
+        text-decoration: none;
+        background-color: rgb(5, 216, 153);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        line-height: 50px;
+        width:auto;
+        transition: 0.5s;
+        letter-spacing: 2px;
+        border: 1px solid rgb(5, 216, 153);
+     }
+
+
+     .btns a:hover{
+        color: white;
+        letter-spacing: 3px;
+        text-decoration-line: none;
+        background: transparent;
+        font-weight: 400;
+    }
+
+    
+.discover{
+    margin-top: 2rem;
+}
+
+.discover a{
+    padding: 1.125rem 2.25rem;
+}
+    
+
+    
+/*  *** Second Container  ****
+*   *** Second Container  ****
+*   *** Second Container  ****
+*   *** Second Container  ****
+*/
+
+.second-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 80px 30px;
+    align-items: start;
+}
+
+.first-column-img{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.first-column-img img{
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+.ede-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 80px 35px;
+    width: 100%;
+}
+
+.third-column h4{
+    font-size: 17px;
+}
+
+.third-column p{
+    padding-top: 2px;
+    font-size: 12px;
+}
+
+.third-column p{
+    text-align: left;
+}
+
+.break{
+    display: none;
+}
+
+
+/*  *** Third Container  ****
+   *   *** Third Container  ****
+   *   *** ThirdContainer  ****
+   *   *** Third Container  ****
+   */
+
+.third-contain{
+    padding: 80px 30px;
+}
+
+.third-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+  
+
+ /* Fourth container **
+ *
+ *
+ */
+
+.first-phase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.first-phase2{
+    display: flex;
+    flex-direction: column-reverse
+}
+
+
+.fp-image{
+    width: 100%;
+    height: 450px;
+}
+
+.fp-image img{
+    width: 100%;
+    height: inherit;
+}
+
+.textt{
+    width: 100%;
+    padding: 40px 30px 60px 30px;
+}
+
+.pro {
+    margin-bottom: 20px;
+}
+
+/* FIFTH CONTAINER 
+*
+*
+*
+*/
+
+.testimonial-container{
+    padding: 80px 30px;
+}
+
+
+
+/* sixth container 
+*
+*
+*
+*/
+
+.sixth-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 80px 30px;
+    gap: 40px;
+}
+
+.call-me-form-container{
+    padding-left: 0px;
+    width: 100%;
+}
+
+
+ /* seventh container **
+ *
+ *
+ */
+
+.project{
+    float: left;
+    width:50%;
+}
+
+
+ /* Eight container **
+ *
+ *
+ */
+
+.Eight-container{
+    padding: 80px 30px;
+}
+
+ .eight-cont{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.eight-text p{
+    font-size: 15px;
+}
+
+
+/* ninth container **
+*
+*
+*
+*/  
+
+
+.ninth-container{
+    width: 100%;
+}
+
+.ninth-inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 80px 30px;
+    justify-content: center;
+    align-items: start;
+}
+
+.ninth-image{
+    width: 100%;
+}
+
+.ninth-image img{
+    width: 100%;
+}
+
+
+/** Tenth  container **
+**
+**
+*/
+
+.tenth-inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    align-items: start;
+    padding: 80px 30px;
+}
+
+.contact-form-container {
+    width: 100%;
+}
+
+
+/** Eleventh  container **
+**
+**
+*/
+
+.eleventh-in{
+    padding: 80px 30px 20px 30px;
+}
+
+.eleventh-inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: start;
+}
+
+.copy-right p{
+    margin-top: 60px;
+}
+
+
+}
