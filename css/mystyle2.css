@@ -5,6 +5,21 @@
         display:none;
     }
 
+    .navsbar {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+        padding: 15px 20px;
+    }
+
+    .navsbar.scrolled {
+        background: #153e52; /* Deep Navy */
+        padding: 15px 30px;  /* It usually "shrinks" slightly for a pro look */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     .menu{
         display: block;
     }
@@ -267,6 +282,20 @@
 
 .ninth-image img{
     width: 100%;
+}
+
+.aboutTextWrapper{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.aboutText{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
 }
 
 

@@ -34,14 +34,14 @@
  </head>
  <body>
     <div class="mySidenav" id="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="l1"><a href="#" class="linkss">HOME</a></div>
-        <div class="l2"><a href="#intro" class="linkss">INTRO</a></div>
-        <div class="l3"><a href="#callme" class="linkss">CALL ME</a></div>
-        <div class="l4"><a href="#services" class="linkss">SERVICES</a></div>
-        <div class="l3 l42"><a href="#projects" class="linkss">PROJECTS</a> </div>
-        <div class="l2"><a href="#contact" class="linkss">CONTACT</a></div>
-        <div class="l1"><a href="#about" >ABOUT</a></div>
+        <a href="javascript:void(0)" class="closebtn down" onclick="closeNav()">&times;</a>
+        <div class="l1 down" onclick="closeNav()"><a href="#home" class="linkss">HOME</a></div>
+        <div class="l2 down" onclick="closeNav()"><a href="#introz" class="linkss">INTRO</a></div>
+        <div class="l3 down" onclick="closeNav()"><a href="#callme" class="linkss">CALL ME</a></div>
+        <div class="l4 down" onclick="closeNav()"><a href="#servicesz" class="linkss">SERVICES</a></div>
+        <div class="l3 l42 up" onclick="closeNav()"><a href="#projectsz" class="linkss">PROJECTS</a> </div>
+        <div class="l2 up" onclick="closeNav()"><a href="#contactz" class="linkss">CONTACT</a></div>
+        <div class="l1 up" onclick="closeNav()"><a href="#about" >ABOUT</a></div>
     </div>
     
 
@@ -52,9 +52,9 @@
         playsinline
         poster="images/header-background.jpg"
         class="hero-video">
-        <source src="https://www.youtube.com/watch?v=Se5NjX-cM5I&t=71s">
+        <source src="video/www.ssvid.net--Moraine-Lake-Lodge-in-Banff-National-Park_720p.mp4">
     </video>     
-    <div class="first-inner">
+    <div class="first-inner" id="home">
         <div class="hero-overlay"></div>
         <div class="header-container">
             <div class="navsbar">
@@ -67,19 +67,19 @@
                     <span class="logo-text">Aria</span>
                 </a>
                 <div class="links">
-                    <a href="#" class="linkss">HOME</a>
-                    <a href="#intro" class="linkss">INTRO</a>
-                    <a href="#services" class="linkss">SERVICES</a>
+                    <a href="#home" class="linkss">HOME</a>
+                    <a href="#introz" class="linkss">INTRO</a>
+                    <a href="#servicesz" class="linkss">SERVICES</a>
                     <a href="#callme" class="linkss">CALL ME</a>
-                    <a href="#projects" class="linkss">PROJECTS</a>
+                    <a href="#projectsz" class="linkss">PROJECTS</a>
                     <a href="#about" class="linkss">ABOUT</a>
-                    <a href="#contact" class="linkss">CONTACT</a>
+                    <a href="#contactz" class="linkss">CONTACT</a>
                     <div class="socialLinks">
                         <div class="soContainer"><i class="fa fa-twitter" id="twitt"></i></div>
                         <div class="soContainer"><i class="fa fa-facebook" id="face"></i></div>  
                     </div>
                 </div>
-                <div style="color:white!important; font-size:20px; cursor:pointer" class="menu" onclick="openNav()">&#9776</div>
+                <div style="color:white!important; font-size:20px; cursor:pointer" class="menu"  id="menu" onclick="openNav()">&#9776</div>
             </div>
       
             <div class="home-text">
@@ -95,7 +95,7 @@
   
 
     <!--second container-->
-    <div class="second-container">
+    <div class="second-container" id="introz">
         <div class="first-column-text">
             <h6 style="color:#14bf98;" id="intro">INTRO</h6>
             <h2>We Offer Some Of The <br class="break1"> 
@@ -165,7 +165,7 @@
     </div>
        
     <!-- THIRD COINTAINER ( services )-->
-    <div class="third-container">
+    <div class="third-container" id="servicesz">
         <div class="third-contain">
             <div class="third-conti">
             <h6 id="services">SERVICES</h6>
@@ -176,7 +176,8 @@
                     <div class="picture1">
                     </div>
                     <div class="texts">
-                        <h4>Off The Ground Off<br>The Ground</h4>
+                        <h4 class="for-desktop">Off The Ground Off<br>The Ground</h4>
+                        <h4 class="for-mobile">Off The Ground</h4>
                         <div class="inText">
                             <p class="subtext">Perfect for fresh ideas or young<br>
                                 startups, this package will help<br>
@@ -247,14 +248,14 @@
             </div>
             <div class="textt">
                 <div class="progs">
-                <h3>Accelerate Business Growth<br>To Improve Revenue Numbers</h3>
+                <h3>Accelerate Business Growth<br class="break1"> To Improve Revenue Numbers</h3>
                 <div class="wayToHelp1">
                     <div class="numb1"><p>1</p></div>
                     <div class="help1">
                         <h4 class="help1a">How Can Aria Help Your Business</h4>
                         <p class="help1b">
-                        At Aria solutions, we've taken the consultancy <br>
-                        concept one step  further by offering a full service<br>
+                        At Aria solutions, we've taken the consultancy <br class="break1">
+                        concept one step  further by offering a full service<br class="break1">
                         management organization with expertise. 
                         </p>
                     </div>
@@ -264,8 +265,8 @@
                     <div class="help2">
                         <h4 class="help2a" onclick="openHelp2b()">Great Strategic Business Planning</h4>
                         <p class="help2b" onclick="closeHelp2b()">
-                        At Aria solutions, we've taken the consultancy <br>
-                        concept one step  further by offering a full service<br>
+                        At Aria solutions, we've taken the consultancy <br class="break1">
+                        concept one step  further by offering a full service<br class="break1">
                         management organization with expertise. 
                         </p>
                     </div>
@@ -275,8 +276,8 @@
                     <div class="help3">
                         <h4 class="help3a" onclick="openHelp3b()">Online Marketing Campaigns</h4>
                         <p class="help3b" onclick="closeHelp3b()">
-                        At Aria solutions, we've taken the consultancy <br>
-                        concept one step  further by offering a full service<br>
+                        At Aria solutions, we've taken the consultancy <br class="break1">
+                        concept one step  further by offering a full service<br class="break1">
                         management organization with expertise. 
                         </p>
                     </div>
@@ -340,24 +341,24 @@
                             <div class="expNumb"><p>1</p></div>
                             <p class="expText"> 
                                 Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Expedita<br class="break1">
-                                molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
+                                adipisicing elit.
+                                Molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
                             </p>
                         </div>
                         <div class="experts">
                             <div class="expNumb"><p>2</p></div>
                             <p class="expText">
                                 Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Expedita<br class="break1">
-                                molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
+                                adipisicing elit.
+                                Molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
                             </p>
                         </div>
                         <div class="experts">
                             <div class="expNumb"><p>3</p></div>
                             <p class="expText">
                                 Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Expedita<br class="break1">
-                                molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
+                                adipisicing elit.
+                                Molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
                             </p>
                         </div>
                     </div>
@@ -420,7 +421,9 @@
                                     <div class="card">
                                         <img class="card-image" src="images/testimonial-1.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Mauris facilisis urna urna, non volutpat tortor rhoncus nec. Vivamus consectetur dui quis libero tempus ut eleifend</p>
+                                            <p class="testimonial-text">
+                                                My goals for using Aria's services seemed high when I first set them but, they've met them with no problems.
+                                            </p>
                                             <p class="testimonial-author">Jude Thorn - Designer</p>
                                         </div>
                                     </div>
@@ -432,7 +435,9 @@
                                     <div class="card">
                                         <img class="card-image" src="images/testimonial-2.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Mauris facilisis urna urna, non volutpat tortor rhoncus nec. Vivamus consectetur dui quis libero tempus ut eleifend</p>
+                                            <p class="testimonial-text">
+                                                The guys from Aria helped with getting my business off the ground, and turning it into a profitable company
+                                            </p>
                                             <p class="testimonial-author">Roy Smith - Developer</p>
                                         </div>
                                     </div>        
@@ -444,7 +449,9 @@
                                     <div class="card">
                                         <img class="card-image" src="images/testimonial-3.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Mauris facilisis urna urna, non volutpat tortor rhoncus nec. Vivamus consectetur dui quis libero tempus ut eleifend</p>
+                                            <p class="testimonial-text">
+                                                I purchased the Growth Accelerator service pack a few years ago and I renew the contract each year.
+                                            </p>
                                             <p class="testimonial-author">Marsha Singer - Marketer</p>
                                         </div>
                                     </div>        
@@ -456,7 +463,9 @@
                                     <div class="card">
                                         <img class="card-image" src="images/testimonial-4.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Mauris facilisis urna urna, non volutpat tortor rhoncus nec. Vivamus consectetur dui quis libero tempus ut eleifend</p>
+                                            <p class="testimonial-text">
+                                               My goals for using Aria's services seemed high when I first set them but, they've met them with no problems.
+                                            </p>
                                             <p class="testimonial-author">Tim Shaw - Designer</p>
                                         </div>
                                     </div>
@@ -468,7 +477,10 @@
                                     <div class="card">
                                         <img class="card-image" src="images/testimonial-5.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Mauris facilisis urna urna, non volutpat tortor rhoncus nec. Vivamus consectetur dui quis libero tempus ut eleifend</p>
+                                            <p class="testimonial-text">
+                                                The guys from Aria helped with getting my business off the ground, and turning it into a profitable company
+                                            </p>
+                                            </p>
                                             <p class="testimonial-author">Lindsay Spice - Designer</p>
                                         </div>
                                     </div>        
@@ -480,7 +492,9 @@
                                     <div class="card">
                                         <img class="card-image" src="images/testimonial-6.jpg" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">Mauris facilisis urna urna, non volutpat tortor rhoncus nec. Vivamus consectetur dui quis libero tempus ut eleifend</p>
+                                            <p class="testimonial-text">
+                                                I purchased the Growth Accelerator service pack a few years ago and I renew the contract each year.
+                                            </p>
                                             <p class="testimonial-author">Ann Black - Developer</p>
                                         </div>
                                     </div>        
@@ -506,10 +520,10 @@
 
 
     <!--SIXTH CONTAINER-->
-    <div class="sixth-container">
+    <div class="sixth-container" id="callme">
         <div class="sixth-inner">
             <div class="call-me">
-                <h6 id="callme">CALL ME</h6>
+                <h6>CALL ME</h6>
                 <h4>Have Us Contact You By Filling<br class="break1">
                     And Submitting The Form
                 </h4>
@@ -551,7 +565,7 @@
     </div>
    
    <!--SEVENTH CONTAINER-->
-   <div class="seventh-container">
+   <div class="seventh-container" id="projectsz">
     <div class="seventh-cont">
      <div class="seventh-inner">
         <div class="headerr-textt">
@@ -575,7 +589,7 @@
                 <div class="project-overlay">
                     <div class="overlay-content">
                         <p class="project-title">Projects Categories</p>
-                        <p class="project-category">Design, Development, Marketing</p>
+                        <p class="project-category">Development, Seo</p>
                     </div>
                 </div>
            </div>
@@ -880,7 +894,7 @@
 
 
    <!--Tenth Container-->
-   <div class="tenth-container">
+   <div class="tenth-container" id="contactz">
     <div class="tenth-inner">
         <div  class="contact-us" id="contact">
            <h6>CONTACT</h6>
@@ -1001,7 +1015,7 @@
                 </div>
                 <div class="form-group2 checkbox-group2">
                     <input type="checkbox"  name="terms">
-                    <label for="contactTerms">I agree with Aria's stated <a href="#">Privacy Policy</a>
+                    <label for="contactTerms" class="contactTerms">I agree with Aria's stated <a href="#">Privacy Policy</a>
                      and <a href="#">Terms & Conditions</a>
                     </label>
                 </div>
@@ -1048,15 +1062,11 @@
     </div>
 </div>
 
-
-
     <script src="js/script.js"></script>
-    <!--<script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     
 
     <script>
-        
 /* Card Slider - Swiper */
 var cardSlider = new Swiper('.card-slider', {
 	autoplay: {
@@ -1091,4 +1101,3 @@ var cardSlider = new Swiper('.card-slider', {
 
  </body>
  </html> 
-

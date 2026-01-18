@@ -2,6 +2,17 @@
 
 .navsbar{
     padding: 10px;
+
+    background: transparent; /* No color at first */
+    border-bottom: none;     /* The template usually has no border when transparent */
+    backdrop-filter: none;   /* Blurs can look messy over complex hero images */
+}
+
+.navsbar.scrolled {
+    background: #153e52; /* Deep Navy */
+    padding: 15px;  /* It usually "shrinks" slightly for a pro look */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo-container {
@@ -23,7 +34,7 @@
 }
 
 .home-text{
-    margin-top: 40%;
+    padding-top: 40%;
 }
 
 .home-text h1{
@@ -82,7 +93,7 @@
     }
     
     .first-column-text p{
-        font-size: 0.875rem;
+        font-size: 0.795rem;
         line-height: 1.4;
         margin-bottom: 10px;
     }
@@ -116,7 +127,8 @@
 
     .third-column p{
         padding-top: 2px;
-        font-size: 10px;
+        font-size: 12.52px;
+        line-height: 1.4;
         text-align: left;
     }
 
@@ -148,16 +160,21 @@
         width: 290px;
     }
 
+    .for-mobile{
+        display: block;
+    }
+
+    .for-desktop{
+        display: none;
+    }
+
 	.texts h4{
 		padding-top:6px;
+        font-size: 1.25rem;
 	}
 	
 	.third-contain{
 		padding: 40px 15px;
-	}
-	
-	.third-column p{
-		font-size: 11px;
 	}
 
 
@@ -176,6 +193,10 @@
     padding: 30px 15px 15px 15px;
 }
 
+.progs{
+    padding-bottom: 5px;
+}
+
 .progs h3{
     font-size: 20px;
 }
@@ -186,7 +207,8 @@
 }
 
 .help1b, .help2b, .help3b{
-    font-size: 11px;
+    font-size: 12.52px;
+    line-height: 1.4;
 }
 
 .pro{
@@ -293,7 +315,7 @@
 }
 
 .call-me .p1{
-    font-size: 12px;
+    font-size: 12.72px;
     padding-bottom: 12px;
     line-height: 1.5;
 }
@@ -301,7 +323,11 @@
 .call-me .p2{
     font-size: 12px;
     padding-bottom: 12px;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+.form-control{
+    font-size: 0.81rem;
 }
 
 .checkbox-group{
@@ -311,7 +337,7 @@
 }
 
 .btn-call-me{
-    font-size: 0.6rem;
+    font-size: 0.795rem;
     margin-top: 0.2rem;
 }
 
@@ -428,18 +454,26 @@
     line-height: 1.5;
 }
 
-.aboutText{
+.aboutTextWrapper{
+    margin-top: 10px;
     display: flex;
+    flex-direction: column;
     align-items: start;
     justify-content: center;
+}
+
+.aboutText{
+    display: flex;
     flex-direction: row;
+    align-items: start!important;
+    justify-content: start!important;
 }
 
 .aboutText p{
     padding-left: 5px;
     padding-bottom: 2.8px;
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 11.4px;
+    line-height: 1.3;
 }
 
 .squareicon{
@@ -504,6 +538,7 @@
 .phoneLine p{
     font-size: 12px;
     padding-left: 5px;
+    line-height: 1.4;
 }
 
 .phoneLine a{
@@ -514,12 +549,17 @@
 .addressLine p{
     padding-left: 5px;
     font-size: 12px;
+    line-height: 1.4;
 }
 
 .followAria{
     font-size: 14px;
     margin-bottom: 20px;
-    margin-top: 2rem;
+    margin-top: 1.8rem;
+}
+
+.contactTerms{
+    font-size: 8px;
 }
 
 .checkbox-group2 {

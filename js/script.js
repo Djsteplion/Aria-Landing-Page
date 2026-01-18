@@ -1,146 +1,121 @@
 /** Begininng Of script for menu **/
 
 function openNav(){
+    document.getElementById("menu").style.display="none";
     document.getElementById("sidenav").style.width="100%";
     document.getElementById("sidenav").style.opacity="1";
     document.getElementById("sidenav").style.display="block";
     document.getElementById("sidenav").style.display="flex";
     document.getElementById("sidenav").style.zIndex="5";
+
+     const observer11 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const targetElements11 = document.querySelectorAll(
+    '.up, .down'
+    );
+    
+    if (targetElements11.length > 0) {
+        targetElements11.forEach(div => observer11.observe(div));
+    } else {
+        console.warn("Observer 11: No elements found for .up or .down");
+    }
 }
 
 function closeNav(){
+    document.getElementById("menu").style.display="flex";
     document.getElementById("sidenav").style.width="0";
-    document.getElementById("sidenav").style.opacity="0";
+
+     const observer11 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const targetElements11 = document.querySelectorAll(
+    '.up, .down'
+    );
+    
+    if (targetElements11.length > 0) {
+        targetElements11.forEach(div => observer11.observe(div));
+    } else {
+        console.warn("Observer 11: No elements found for .up or .down");
+    }
+    
     document.getElementById("sidenav").style.zIndex="-5";
+    document.getElementById("sidenav").style.opacity="0";
 }
 /** End Of script for menu */
 
 
 
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+window.onscroll = function() {
+    const nav = document.querySelector('.navsbar');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+};
+
+
 /** Begininng Of script for the "About Us Section" **/
-    const numbers= document.querySelectorAll(".numbers-1");
-
-    window.addEventListener("scroll", () => {
-        numbers.forEach(number => {
-            if (isElementInViewport(number)) {
-                startAnimation(number);
-                
-            }
-        });
-    });
-
-    function isElementInViewport(element){
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth  || document.documentElement.clientWidth)
-        );
-    }
-
-
-    function startAnimation(element) {
-        let currentValue = 0;
-        const targetValue = parseInt(element.textContent);
-        const step = Math.ceil(targetValue / 60); // adjust the speed of the animation of the numbers, by changing the denominator of this expression.
-        
-        const interval = setInterval(() => {
+ /** Optimized Number Animation using Intersection Observer **/
+const startNumberAnimation = (element) => {
+    let currentValue = 0;
+    const targetValue = parseInt(element.textContent);
+    // Adjust speed: increase 60 to make it slower, decrease to make it faster
+    const step = Math.ceil(targetValue / 110); 
+    
+    const interval = setInterval(() => {
+        currentValue += step;
+        if (currentValue >= targetValue) {
+            element.textContent = targetValue;
+            clearInterval(interval);
+        } else {
             element.textContent = currentValue;
-            currentValue += step;
+        }
+    }, 16.7); // Roughly 60 frames per second
+};
 
-            if (currentValue >= targetValue) {
-                element.textContent = targetValue;
-                clearInterval(interval);
-            }
-        }, 16.7); // adjust the interval time for the animation of the numbers , by changing this value.
-
-    }
-
-   
-// For  the div of class numbers-2
-
-const numbers2= document.querySelectorAll(".numbers-2");
-
-window.addEventListener("scroll", () => {
-    numbers2.forEach(number => {
-        if (isElementInViewport(number)) {
-            startAnimation(number);
-            
+const numberObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Run the animation
+            startNumberAnimation(entry.target);
+            // STOP observing so it only runs once per page load
+            observer.unobserve(entry.target);
         }
     });
+}, { threshold: 0.5 }); // Triggers when 50% of the number is visible
+
+// Target all number classes at once
+document.querySelectorAll('.numbers-1, .numbers-2, .numbers-3').forEach(num => {
+    numberObserver.observe(num);
 });
-
-function isElementInViewport(element){
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth  || document.documentElement.clientWidth)
-    );
-}
-
-
-function startAnimation(element) {
-    let currentValue = 0;
-    const targetValue = parseInt(element.textContent);
-    const step = Math.ceil(targetValue / 60); // adjust the speed of the animation of the numbers, by changing the denominator of this expression.
-    
-    const interval = setInterval(() => {
-        element.textContent = currentValue;
-        currentValue += step;
-
-        if (currentValue >= targetValue) {
-            element.textContent = targetValue;
-            clearInterval(interval);
-        }
-    }, 16.7); // adjust the interval time for the animation of the numbers , by changing this value.
-
-}
-
-
-
-// For  the div of class numbers-3
-
-const numbers3= document.querySelectorAll(".numbers-3");
-
-window.addEventListener("scroll", () => {
-    numbers3.forEach(number => {
-        if (isElementInViewport(number)) {
-            startAnimation(number);
-            
-        }
-    });
-});
-
-function isElementInViewport(element){
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth  || document.documentElement.clientWidth)
-    );
-}
-
-
-function startAnimation(element) {
-    let currentValue = 0;
-    const targetValue = parseInt(element.textContent);
-    const step = Math.ceil(targetValue / 60); // adjust the speed of the animation of the numbers, by changing the denominator of this expression.
-    
-    const interval = setInterval(() => {
-        element.textContent = currentValue;
-        currentValue += step;
-
-        if (currentValue >= targetValue) {
-            element.textContent = targetValue;
-            clearInterval(interval);
-        }
-    }, 16.7); // adjust the interval time for the animation of the numbers , by changing this value.
-
-}
 
 
 /** End Of script for the "About Us Section" **/
@@ -178,11 +153,11 @@ const image8 = document.querySelector(".image8");
 
 
  design.addEventListener("click", function() {
-    image1.style.display = "block";
+    image1.style.display = "none";
     image2.style.display = "none";
     image3.style.display = "none";
     image4.style.display = "none";
-    image5.style.display = "none";
+    image5.style.display = "block";
     image6.style.display = "block";
     image7.style.display = "block";
     image8.style.display = "block";
@@ -199,18 +174,18 @@ const image8 = document.querySelector(".image8");
     image5.style.display = "block";
     image6.style.display = "none";
     image7.style.display = "block";
-    image8.style.display = "block";
+    image8.style.display = "none";
 
  } );
 
 
  marketing.addEventListener("click", function() {
-    image1.style.display = "block";
+    image1.style.display = "none";
     image2.style.display = "block";
     image3.style.display = "block";
     image4.style.display = "none";
     image5.style.display = "block";
-    image6.style.display = "none";
+    image6.style.display = "block";
     image7.style.display = "none";
     image8.style.display = "none";
 
@@ -219,10 +194,10 @@ const image8 = document.querySelector(".image8");
 
  seo.addEventListener("click", function() {
     image1.style.display = "none";
-    image2.style.display = "block";
+    image2.style.display = "none";
     image3.style.display = "none";
     image4.style.display = "block";
-    image5.style.display = "none";
+    image5.style.display = "block";
     image6.style.display = "block";
     image7.style.display = "none";
     image8.style.display = "block";
@@ -303,18 +278,22 @@ const image8 = document.querySelector(".image8");
 
  // script for the carousel ( customers testimonial)
 
-     const carouselSlide = document.querySelector("caro-slide");
-     const carouselItems = document.querySelectorAll("caro-item");
+     
 
+     // Fixed Carousel Syntax
+const carouselSlide = document.querySelector(".caro-slide"); // Added dot for class
+const carouselItems = document.querySelectorAll(".caro-item"); // Added dot for class
 
-     let counter = 0;
-     const interval = setInterval(() => {
-        if (counter === carouselItems.length - 2) {
-            clearInterval(interval);
-        }
-        carouselSlide.style.transform = " translateX(-${counter * 20}%)";
-        counter++;
-     }, 3000);
+let counter = 0;
+const caroInterval = setInterval(() => {
+    if (carouselItems.length === 0) return clearInterval(caroInterval); // Safety check
+    if (counter >= carouselItems.length - 1) {
+        counter = 0; // Reset to loop
+    }
+    // USE BACKTICKS ` HERE:
+    carouselSlide.style.transform = `translateX(-${counter * 20}%)`;
+    counter++;
+}, 3000);
 
 
      // script for the fourth container ( Business, Enterprise & Quality)
@@ -373,38 +352,6 @@ const qualities  = document.querySelector(".qualities");
     }
 
 
-
-        
-/* Card Slider - Swiper */
-
-var cardSlider = new Swiper('.card-slider', {
-	autoplay: {
-		delay: 4000,
-		disableOnInteraction: false
-	},
-	loop: true,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	},
-	slidesPerView: 3,
-	spaceBetween: 70,
-	breakpoints: {
-		// when window is <= 767px
-		767: {
-			slidesPerView: 1
-		},
-		// when window is <= 991px
-		991: {
-			slidesPerView: 2,
-			spaceBetween: 40
-		}
-	}
-});
-
-
-
-
 /* FOURTH CONTAINER ---------------------------------------------------------------  */
 
 function openHelp2b() {
@@ -443,3 +390,52 @@ function closeHelp3b() {
     document.querySelector('.help3a').style.color = '#484a46';
 }
 
+/* Slide-up Animation ------------------------------------------------------------ */
+
+
+// Wrap in a function to isolate it from other errors
+function initScrollAnimations() {
+    const observer10 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const targetElements10 = document.querySelectorAll(
+    '.home-text, .first-column-text, .ede-container, .third-conti, .third-cont1, .third-cont2, .third-cont3, .progs, .pro, .businesses, .expertises, .qualities, .row, .call-me, .call-me-form-container, .headerr-textt, .eight-text, .project, .ninth-image, .ninth-cont, .contact-us, .contact-form-container, .eleventh-inner'
+    );
+    
+    if (targetElements10.length > 0) {
+        targetElements10.forEach(div => observer10.observe(div));
+    } else {
+        console.warn("Observer 10: No elements found for .home-text or .first-column-text");
+    }
+}
+initScrollAnimations();
+
+
+
+function initScrollAnimations2() {
+    const observer11 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    const targetElements11 = document.querySelectorAll(
+    '.up, .down'
+    );
+    
+    if (targetElements11.length > 0) {
+        targetElements11.forEach(div => observer11.observe(div));
+    } else {
+        console.warn("Observer 11: No elements found for .up or .down");
+    }
+}
+initScrollAnimations2();
