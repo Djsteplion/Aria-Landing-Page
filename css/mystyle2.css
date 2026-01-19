@@ -99,7 +99,10 @@
     color: white;
     transition:all 500ms ease-in-out;
 }
-    
+
+.mouse-scroll{
+    display: flex;
+}
 
     
 /*  *** Second Container  ****

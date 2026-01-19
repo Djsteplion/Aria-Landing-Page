@@ -362,12 +362,13 @@ html{
     transition:all 500ms ease-in-out;
 }
 
+
 .mouse-scroll {
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
@@ -384,6 +385,7 @@ html{
     justify-content: center;
     padding-top: 8px;
     margin-bottom: 10px;
+    opacity: 0.8;
 }
 
 /* The Moving Dot (Wheel) */
@@ -397,6 +399,7 @@ html{
 
 /* The Text below the mouse */
 .scroll-text {
+    display: none;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
