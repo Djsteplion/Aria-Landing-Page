@@ -16,7 +16,7 @@
        /* border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
     }
     .hero-overlay{
-        max-height: 100vh;
+        max-height: 97.5vh;
         overflow-x: hidden!important;
     }
 
@@ -369,6 +369,7 @@
 
 
 }
+
 
 
 
