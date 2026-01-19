@@ -6,7 +6,7 @@ function openNav(){
     document.getElementById("sidenav").style.opacity="1";
     document.getElementById("sidenav").style.display="block";
     document.getElementById("sidenav").style.display="flex";
-    document.getElementById("sidenav").style.zIndex="5";
+    document.getElementById("sidenav").style.zIndex="7";
 
      const observer11 = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -51,7 +51,7 @@ function closeNav(){
         console.warn("Observer 11: No elements found for .up or .down");
     }
     
-    document.getElementById("sidenav").style.zIndex="-5";
+    document.getElementById("sidenav").style.zIndex="-7";
     document.getElementById("sidenav").style.opacity="0";
 }
 /** End Of script for menu */

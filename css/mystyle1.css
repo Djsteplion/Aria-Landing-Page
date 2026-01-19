@@ -14,9 +14,22 @@ body{
 }
 
 html{
+    scroll-behavior: smooth;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+}
+
+.header-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Takes full height of the screen */
+    display: flex;
+    flex-direction: column; /* Stacks navbar and text vertically */
+    justify-content: center; /* Centers children vertically */
+    align-items: center; /* Centers children horizontally */
+    text-align: center; /* Centers the actual text lines */
+    z-index: 5;
 }
 
 .hero-video{
@@ -27,6 +40,7 @@ html{
     height: 100%;
     object-fit: cover;
     z-index: -2;
+    inset: 0;
 }
 
 .hero-overlay{
@@ -36,9 +50,9 @@ html{
     right: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
     background: rgba(17, 45, 50, 0.6);
     z-index: -1;
+    inset: 0;
 }
 
 .first-inner{
@@ -67,7 +81,7 @@ html{
 
     position: fixed;
     top: 0;
-    z-index: 1000;
+    z-index: 8!important;
     transition: all 0.3s ease;
   
     -webkit-backdrop-filter: blur(20px);
@@ -76,7 +90,7 @@ html{
 
 .navsbar.scrolled {
     background: #153e52; /* Deep Navy */
-    padding: 15px 70px;  
+    padding: 15px 70px;  /* It usually "shrinks" slightly for a pro look */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -217,10 +231,10 @@ html{
     position: fixed;
     background-color: rgba(21, 62, 82, 0.98); /*  #153e52 */
     opacity: 0.9;
-    z-index: 2;
-    padding-top: 100px;
+    z-index: 5;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     transition: all 0.5s ease-in-out;
 }
 
@@ -268,7 +282,7 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 150px;
+    padding: 80px 20px 0px 20px;
     text-align: center;
     opacity: 0;
 }
@@ -348,6 +362,61 @@ html{
     transition:all 500ms ease-in-out;
 }
 
+.mouse-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    z-index: 5;
+}
+
+/* The Mouse Body */
+.mouse {
+    width: 26px;
+    height: 42px;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    margin-bottom: 10px;
+}
+
+/* The Moving Dot (Wheel) */
+.wheel {
+    width: 4px;
+    height: 8px;
+    background-color: #14bf98; /* Your Aria Teal */
+    border-radius: 2px;
+    animation: scroll-dot 2s infinite;
+}
+
+/* The Text below the mouse */
+.scroll-text {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* The Sliding Animation */
+@keyframes scroll-dot {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
 
 /* SECOND ONTAINER -------------------------------------------------------------- */
 
@@ -358,7 +427,6 @@ html{
     padding: 100px 70px 50px 70px;
     align-items: center;
 }
-
 
 .first-column-img{
     width: 50%;
@@ -1931,4 +1999,3 @@ transform: translateY(-30px);
     color: #dfe5e8;
     font-size: 0.8125rem; /* 12px to 13px */
 }
-
