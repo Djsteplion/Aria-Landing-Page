@@ -29,6 +29,10 @@
         display: none;
     }
 
+    .header-container{
+        height: 95%;
+    }
+
     .home-text{
         display: flex;
         justify-content: center;
@@ -365,6 +369,7 @@
 .copy-right p{
     margin-top: 60px;
 }
+
 
 
 }
