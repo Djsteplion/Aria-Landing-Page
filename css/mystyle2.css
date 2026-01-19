@@ -29,15 +29,10 @@
         display: none;
     }
 
-    .header-container{
-        height: 93%;
-    }
-
     .home-text{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px 20px 0px 20px;
     }
     
     .home-text h1{
@@ -371,7 +366,4 @@
 }
 
 
-
 }
-
-

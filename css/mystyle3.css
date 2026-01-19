@@ -2,7 +2,6 @@
 
 .navsbar{
     padding: 10px;
-
     background: transparent; /* No color at first */
     border-bottom: none;     /* The template usually has no border when transparent */
     backdrop-filter: none;   /* Blurs can look messy over complex hero images */
