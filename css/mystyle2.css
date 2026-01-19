@@ -97,6 +97,7 @@
 
 .mouse-scroll{
     display: flex;
+    margin-bottom: 0px;
 }
 
     
@@ -360,6 +361,7 @@
 .copy-right p{
     margin-top: 60px;
 }
+
 
 
 }
