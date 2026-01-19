@@ -24,7 +24,8 @@ html{
     position: relative;
     width: 100%;
 	background: rgba(17, 45, 50, 0.6);
-    min-height: 100vh; /* Takes full height of the screen */
+	height: 100%;
+    /*min-height: 100vh; /* Takes full height of the screen */
     display: flex;
     flex-direction: column; /* Stacks navbar and text vertically */
     justify-content: center; /* Centers children vertically */
@@ -2003,4 +2004,5 @@ transform: translateY(-30px);
     color: #dfe5e8;
     font-size: 0.8125rem; /* 12px to 13px */
 }
+
 
