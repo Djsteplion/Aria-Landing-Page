@@ -123,8 +123,8 @@ html{
 
 .links a{
     font-size: 12px;
-    color: white;
     font-weight: 700;
+    color: white;
     text-decoration-line: none;
     padding: 0px 10px;
 }
@@ -215,7 +215,7 @@ html{
     top:0;
     right: 0;
     position: fixed;
-    background-color: black;
+    background-color: rgba(21, 62, 82, 0.98); /*  #153e52 */
     opacity: 0.9;
     z-index: 2;
     padding-top: 100px;
@@ -230,33 +230,35 @@ html{
     text-align: center;
     font-weight: 400;
     color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
     padding: 5px;
     transition: all 0.5s ease-in-out;
 }
 
 .l1{
-    padding: 5px 10px;
+    padding: 10px 10px;
     border-bottom: 1px solid white;
     width: min-content;
 }
 
 .l2{
-    padding: 5px 15px;
+    padding: 10px 15px;
     border-bottom: 1px solid white;
 }
 
 .l3{
-    padding: 5px 20px;
+    padding: 10px 31px 10px 29.25px;
     border-bottom: 1px solid white;
 }
 .l4{
-    padding: 5px 25px;
+    padding: 10px 25px;
     border-bottom: 1px solid white;
 }
 
 .l42{
     margin-top: 2px;
-    border-top: 1px solid white;
+    border-top: 1px solid white; 
 }
 
 

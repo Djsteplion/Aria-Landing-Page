@@ -356,7 +356,7 @@ const qualities  = document.querySelector(".qualities");
 
 function openHelp2b() {
     document.querySelector('.help2b').style.opacity = '1';
-    document.querySelector('.help2b').style.fontSize = '0.72rem';
+    document.querySelector('.help2b').style.fontSize = '0.795rem';
     document.querySelector('.numb2').style.color = '#ffffff';
     document.querySelector('.numb2').style.backgroundColor = '#14bf98';
     document.querySelector('.numb2').style.borderColor = 'transparent';
@@ -374,7 +374,7 @@ function closeHelp2b() {
 
 function openHelp3b() {
     document.querySelector('.help3b').style.opacity = '1';
-    document.querySelector('.help3b').style.fontSize = '0.72rem';
+    document.querySelector('.help3b').style.fontSize = '0.795rem';
     document.querySelector('.numb3').style.color = '#ffffff';
     document.querySelector('.numb3').style.backgroundColor = '#14bf98';
     document.querySelector('.numb3').style.borderColor = 'transparent';

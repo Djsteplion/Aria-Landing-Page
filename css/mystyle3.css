@@ -127,7 +127,7 @@
 
     .third-column p{
         padding-top: 2px;
-        font-size: 12.52px;
+        font-size: 0.795rem;
         line-height: 1.4;
         text-align: left;
     }
@@ -158,6 +158,7 @@
 
     .third-cont1, .third-cont2, .third-cont3{
         width: 290px;
+        height: 480px;
     }
 
     .for-mobile{
@@ -207,8 +208,9 @@
 }
 
 .help1b, .help2b, .help3b{
-    font-size: 12.52px;
+    font-size: 0.795rem;
     line-height: 1.4;
+    padding-bottom: 4px;
 }
 
 .pro{
