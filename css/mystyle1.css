@@ -77,8 +77,7 @@ html{
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    margin-bottom: 30px;
-
+	
     background: transparent; /* No color at first */
     border-bottom: none;     /* The template usually has no border when transparent */
     backdrop-filter: none;   /* Blurs can look messy over complex hero images */
@@ -2007,3 +2006,4 @@ transform: translateY(-30px);
     color: #dfe5e8;
     font-size: 0.8125rem; /* 12px to 13px */
 }
+
