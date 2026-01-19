@@ -76,7 +76,7 @@ html{
 
 .navsbar.scrolled {
     background: #153e52; /* Deep Navy */
-    padding: 15px 30px;  /* It usually "shrinks" slightly for a pro look */
+    padding: 15px 70px;  
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -357,6 +357,15 @@ html{
     justify-content: space-between;
     padding: 100px 70px 50px 70px;
     align-items: center;
+}
+
+
+.first-column-img{
+    width: 50%;
+}
+
+.first-column-img img{
+    width: 100%;
 }
 
 #intro{
@@ -1922,3 +1931,4 @@ transform: translateY(-30px);
     color: #dfe5e8;
     font-size: 0.8125rem; /* 12px to 13px */
 }
+
