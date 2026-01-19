@@ -51,12 +51,13 @@ html{
     top: 0;
     left: 0;
     right: 0;
+	bottom: 0;
     width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+	height: 100%;
+    
     background: rgba(17, 45, 50, 0.6);
     z-index: -1;
-    inset: 0;
+    pointer-events: none;
 }
 
 .first-inner{
@@ -2008,6 +2009,7 @@ transform: translateY(-30px);
     color: #dfe5e8;
     font-size: 0.8125rem; /* 12px to 13px */
 }
+
 
 
 
