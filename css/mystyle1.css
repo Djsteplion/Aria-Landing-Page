@@ -23,8 +23,7 @@ html{
 .header-container {
     position: relative;
     width: 100%;
-	min-height: 100vh;
-    overflow-x: hidden!important;
+    height: 100dvh;
     display: flex;
    /* background: rgba(17, 45, 50, 0.6); */
     flex-direction: column; /* Stacks navbar and text vertically */
@@ -33,21 +32,17 @@ html{
     text-align: center; /* Centers the actual text lines */
     z-index: 5;
     inset: 0;
-	pointer-events: none;
 }
 
 .hero-video{
     position: absolute;
     top: 0;
     left: 0;
-	right:0;
-	bottom:0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -2;
     inset: 0;
-	pointer-events: none;
 }
 
 .hero-overlay{
@@ -55,13 +50,12 @@ html{
     top: 0;
     left: 0;
     right: 0;
-	bottom: 0;
     width: 100%;
-	height: 100%;
-    
+    min-height: 100vh;
+    min-height: 100dvh;
     background: rgba(17, 45, 50, 0.6);
     z-index: -1;
-    pointer-events: none;
+    inset: 0;
 }
 
 .first-inner{
@@ -71,7 +65,8 @@ html{
     right: 0;
     left: 0;
     min-height: 100vh;
-    overflow: hidden!important;
+    min-height: 100dvh;
+    overflow: hidden;
     width: 100%;
     color: white;
 }
@@ -93,7 +88,7 @@ html{
     z-index: 8!important;
     transition: all 0.3s ease;
   
-  /*  -webkit-backdrop-filter: blur(20px); */
+    -webkit-backdrop-filter: blur(20px);
   
 }
 
@@ -375,9 +370,9 @@ html{
 
 .mouse-scroll {
     position: absolute;
+    bottom: 40px;
     left: 50%;
-	transform: TranslateX(-50%);
-	bottom: 40px;
+    transform: translateX(-50%);
     display: none;
     flex-direction: column;
     align-items: center;
@@ -2012,9 +2007,3 @@ transform: translateY(-30px);
     color: #dfe5e8;
     font-size: 0.8125rem; /* 12px to 13px */
 }
-
-
-
-
-
-

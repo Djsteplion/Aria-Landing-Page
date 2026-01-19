@@ -12,17 +12,13 @@
     .navsbar.scrolled {
         background: #153e52; /* Deep Navy */
         padding: 15px 30px;  /* It usually "shrinks" slightly for a pro look */
-       /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
-       /* border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .hero-overlay{
-        min-height: 97.5vh;
-        overflow-x: hidden!important;
-    }
+    
 
     .menu{
         display: block;
-        z-index: 8;
     }
 
     .links{
@@ -101,7 +97,6 @@
 
 .mouse-scroll{
     display: flex;
-    margin-bottom: 10px;
 }
 
     
@@ -112,7 +107,6 @@
 */
 
 .second-container{
-    clear: both;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -368,14 +362,4 @@
 }
 
 
-
 }
-
-
-
-
-
-
-
-
-
