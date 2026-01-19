@@ -373,6 +373,7 @@ html{
     position: absolute;
     left: 50%;
 	transform: TranslateX(-50%);
+	bottom: 40px;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -2007,5 +2008,6 @@ transform: translateY(-30px);
     color: #dfe5e8;
     font-size: 0.8125rem; /* 12px to 13px */
 }
+
 
 
