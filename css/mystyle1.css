@@ -89,7 +89,7 @@ html{
     transition: all 0.3s ease;
   
     -webkit-backdrop-filter: blur(20px);
-    margin-bottom: 15px;
+  
 }
 
 .navsbar.scrolled {
