@@ -1,1109 +1,2664 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+
+    <!-- Prevents IE compatibility mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="developer"  content="Olayiwola Stephen, @djsteplion on twitter, olayiwola stephen on linkedin" >
-    <title>Aria Website</title>
 
+    <!-- Responsive viewport -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- SEO -->
+    <meta
+        name="description"
+        content="Aria provides professional business growth, environmental analysis, strategic planning, online marketing, and business consultancy services."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow, max-image-preview:large"
+    >
+
+    <meta
+        name="author"
+        content="Olayiwola Stephen"
+    >
+
+    <meta
+        name="theme-color"
+        content="#14bf98"
+    >
+
+    <!-- Canonical URL: CHANGE THIS -->
+    <link
+        rel="canonical"
+        href="https://example.com/"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Aria | Business Growth & Consultancy"
+    >
+
+    <meta
+        property="og:description"
+        content="Professional business growth and consultancy services designed to help companies grow, improve revenue, and achieve their objectives."
+    >
+
+    <meta
+        property="og:url"
+        content="https://example.com/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://example.com/images/header-background.jpg"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="Scenic background representing Aria business consultancy"
+    >
+
+    <!-- Twitter/X -->
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Aria | Business Growth & Consultancy"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Professional business growth and consultancy services."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://example.com/images/header-background.jpg"
+    >
+
+    <title>Aria | Business Growth & Consultancy Services</title>
+
+    <!-- Preconnect only to resources actually used -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <!--Stylesheet For Desktop Devices-->
-    <link rel="stylesheet" href="css/mystyle1.css">
+    <!-- Font -->
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+    >
 
-    <!--Stylesheet For Tablet Devices-->
-    <link rel="stylesheet" href="css/mystyle2.css">
+    <!-- Main stylesheet -->
+    <link
+        rel="stylesheet"
+        href="css/mystyle1.css"
+    >
 
-    <!--Stylesheet For Mobile Devices-->
-    <link rel="stylesheet" href="css/mystyle3.css">
-   
-    <!---link to font awesome-->	
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        rel="stylesheet"
+        href="css/mystyle2.css"
+        media="(min-width: 768px) and (max-width: 1023px)"
+    >
 
-    <link rel="stylesheet" href="C:/Users/USER/Desktop/Website/New folder/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
-     
-     <!--link to swiper css-->
-    <link href="css/swiper.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="css/mystyle3.css"
+        media="(max-width: 767px)"
+    >
+
+    <!-- Swiper -->
+    <link
+        rel="stylesheet"
+        href="css/swiper.css"
+    >
+
+    <!--
+        DO NOT use:
+        C:/Users/USER/Desktop/...
         
+        That path only exists on your computer.
+    -->
 
-  
+    <!-- Critical loader styles -->
+    <style>
+        :root {
+            --aria-green: #14bf98;
+            --loader-bg: #111;
+        }
 
- </head>
- <body>
-    <div class="mySidenav" id="sidenav">
-        <a href="javascript:void(0)" class="closebtn down" onclick="closeNav()">&times;</a>
-        <div class="l1 down" onclick="closeNav()"><a href="#home" class="linkss">HOME</a></div>
-        <div class="l2 down" onclick="closeNav()"><a href="#introz" class="linkss">INTRO</a></div>
-        <div class="l3 down" onclick="closeNav()"><a href="#callme" class="linkss">CALL ME</a></div>
-        <div class="l4 l42 up" onclick="closeNav()"><a href="#servicesz" class="linkss">SERVICES</a></div>
-        <div class="l3 up" onclick="closeNav()"><a href="#projectsz" class="linkss">PROJECTS</a> </div>
-        <div class="l2 up" onclick="closeNav()"><a href="#contactz" class="linkss">CONTACT</a></div>
-        <div class="l1 up" onclick="closeNav()"><a href="#about" >ABOUT</a></div>
-    </div>
-    
+        /* Prevent scrolling while page is loading */
+        html.is-loading,
+        body.is-loading {
+            overflow: hidden;
+        }
 
-    <video
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="images/header-background.jpg"
-        class="hero-video">
-        <source src="video/www.ssvid.net--Moraine-Lake-Lodge-in-Banff-National-Park_720p.mp4">
-    </video>     
-    <div class="first-inner" id="home">
-        <div class="hero-overlay"></div>
-        <div class="header-container">
-            <div class="navsbar">
-                <a class="navbar-brand logo-container" href="#">
-                    <div class="logo-icon">
-                        <span class="sq sq-1"></span>
-                        <span class="sq sq-2"></span>
-                        <span class="sq sq-3"></span>
-                    </div>
-                    <span class="logo-text">Aria</span>
-                </a>
-                <div class="links">
-                    <a href="#home" class="linkss">HOME</a>
-                    <a href="#introz" class="linkss">INTRO</a>
-                    <a href="#servicesz" class="linkss">SERVICES</a>
-                    <a href="#callme" class="linkss">CALL ME</a>
-                    <a href="#projectsz" class="linkss">PROJECTS</a>
-                    <a href="#about" class="linkss">ABOUT</a>
-                    <a href="#contactz" class="linkss">CONTACT</a>
-                    <div class="socialLinks">
-                        <div class="soContainer"><i class="fa fa-twitter" id="twitt"></i></div>
-                        <div class="soContainer"><i class="fa fa-facebook" id="face"></i></div>  
-                    </div>
-                </div>
-                <div style="color:white!important; font-size:20px; cursor:pointer" class="menu"  id="menu" onclick="openNav()">&#9776</div>
-            </div>
-      
-            <div class="home-text">
-                <h1>BUSINESS SOLUTIONS</h1>
-                <p>Aria is a top consultancy company specializing in business growth using<br class="break">
-                   online marketing and conversion optimization tactics </p>
-                <div class="discover">
-                    <a href="#intro">DISCOVER</a>
-                </div>
-            </div>
-        </div>
-    </div>  
-    <a href="#introz" class="mouse-scroll">
-    <span class="mouse">
-        <span class="wheel"></span>
-    </span>
-    <span class="scroll-text">SCROLL DOWN</span>
-    </a>      
-  
+        /* Full-screen loader */
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: grid;
+            place-items: center;
+            background: var(--loader-bg);
+            opacity: 1;
+            visibility: visible;
+            transition:
+                opacity 0.45s ease,
+                visibility 0.45s ease;
+        }
 
-    <!--second container-->
-    <div class="second-container" id="introz">
-        <div class="first-column-text">
-            <h6 style="color:#14bf98;" id="intro">INTRO</h6>
-            <h2>We Offer Some Of The <br class="break1"> 
-                Best Business Growth <br class="break1">
-                Services In Town 
-            </h2>
-            <p>Launching a new company or developing the market<br class="break1">
-            position of an existing one can be quite an<br class="break1">
-            overwhelming process at times.</p>
-            <p><i>"Our mission here at Aria is to get you through those<br class="break1">
-            tough moments relying on our team's expertise in <br class="break1">
-            starting and growing companies."</i></p>
-            <h5>Louise Donovan - CEO</h5>
-        </div>
-        <div class="first-column-img" >
-            <img src="images/intro-office.jpg" alt="">
-        </div>
-    </div>
+        #page-loader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
 
-    <div class="ede-container">
-        <div class="third-column">
-            <div class="hex">
-                <div class="binos">
-                    <div class="bint">
-                        <i class="fa fa-binoculars" id="binos"></i>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <h4>Environmental Analysis</h4>
-            <p>The starting point of any success story is<br class="break">
-            knowing your current position  in the<br class="break">
-            business environment 
-            </p>
-       </div>
+        .loader-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            text-align: center;
+        }
 
-       <div class="third-column">
-            <div class="hex">
-                <div class="binos">
-                    <div class="bint">
-                        <i class="fa fa-list" id="binos"></i>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <h4>Development Planning</h4>
-            <p>After completing the environmental analysis<br class="break">
-            the next stage is to design and plan your<br class="break">
-            development strategy
-            </p>
-       </div>
+        .loader-logo {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            animation: loader-pulse 1.6s ease-in-out infinite;
+        }
 
-       <div class="third-column">
-            <div class="hex">
-                <div class="binos">
-                    <div class="bint">
-                        <i class="fa fa-pie-chart" id="binos"></i>
-                    </div>
-                </div>
-            </div>
-            <br> 
-            <h4>Execution & Evaluation</h4>
-            <p>In this phase you will focus on executing the<br class="break">
-            action plan and evaluating the results after<br class="break">
-            each marketing campaign</p>
-       </div>
-    </div>
-       
-    <!-- THIRD COINTAINER ( services )-->
-    <div class="third-container" id="servicesz">
-        <div class="third-contain">
-            <div class="third-conti">
-            <h6 id="services">SERVICES</h6>
-            <h4 class="choose">Choose The Service Package<br class="break1"> That Suits Your Needs</h4>
-            </div>
-            <div class="third-inner">
-                <div class="third-cont1">
-                    <div class="picture1">
-                    </div>
-                    <div class="texts">
-                        <h4 class="for-desktop">Off The Ground Off<br>The Ground</h4>
-                        <h4 class="for-mobile">Off The Ground</h4>
-                        <div class="inText">
-                            <p class="subtext">Perfect for fresh ideas or young<br>
-                                startups, this package will help<br>
-                                get the business off the ground. 
-                            </p>
-                            <div class="featureList">
-                                <p><span class="icon"><i class="fa fa-square" style="color:#14bf98;"></i></span> Environment and competition</p>
-                                <p><span class="icon"><i class="fa fa-square" style="color:#14bf98;"></i> </span>  Designing the marketing plan</p>
-                            </div>
-                        </div>
-                        <p style="text-align: center; color: #484a46;"><b>Starting at <span style="color: #14bf98;">$199</span></b></p>
-                        <span class="detel">
-                            DETAILS
-                        </span>
-                    </div>
-                </div>
-                <div class="third-cont2">
-                    <div class="picture2">
-                    </div>
-                    <div class="texts">
-                        <h4>Accelerated Growth</h4>
-                        <div class="inText">
-                            <p class="subtext">Use this service pack to give your<br>
-                            company the neccessary impulse<br>
-                            to become an industry leader
-                            </p>
-                            <div class="featureList">
-                                <p><span class="icon"><i class="fa fa-square" style="color:#14bf98;"></i></span> Business strategy planning</p>
-                                <p><span class="icon"><i class="fa fa-square" style="color:#14bf98;"></i></span> Taking the planned actions</p>
-                            </div>
-                        </div>
-                        <p style="text-align: center; color: #484a46;"><b>Starting at <span style="color: #14bf98;">$299</span></b></p>
-                        <span class="detel">
-                            DETAILS
-                        </span>
-                    </div>
-                </div>
-                <div class="third-cont3">
-                    <div class="picture3">
-                    </div>
-                    <div class="texts">
-                        <h4>Market Domination</h4>
-                        <div class="inText">
-                            <p class="subtext">You already are a reference point<br>
-                            in your industry now you need to<br>
-                            learn about acquisitions 
-                            </p>
-                            <div class="featureList">
-                                <p><span class="icon"><i class="fa fa-square" style="color:#14bf98;"></i></span> Maintaining the leader status</p>
-                                <p><span class="icon"><i class="fa fa-square" style="color:#14bf98;"></i></span> Acquisitions the right way off</p>
-                            </div>
-                        </div>
-                        <p style="text-align: center; color:#484a46;"><b>Starting at <span style="color: #14bf98;">$299</span></b></p>
-                        <span  class="detel">
-                            DETAILS
-                        </span>
-                    </div>
-                </div>
-            </div>   
-        </div>
-    </div>
-   
-    <!--Fourth  Container-->
-    <div class="fourth-container">
-        <div class="first-phase">
-            <div class="fp-image">
-            <img src="images/details-1-background.jpg" alt=" ">
-            </div>
-            <div class="textt">
-                <div class="progs">
-                <h3>Accelerate Business Growth<br class="break1"> To Improve Revenue Numbers</h3>
-                <div class="wayToHelp1">
-                    <div class="numb1"><p>1</p></div>
-                    <div class="help1">
-                        <h4 class="help1a">How Can Aria Help Your Business</h4>
-                        <p class="help1b">
-                        At Aria solutions, we've taken the consultancy <br class="break1">
-                        concept one step  further by offering a full service<br class="break1">
-                        management organization with expertise. 
-                        </p>
-                    </div>
-                </div>
-                <div class="wayToHelp2">
-                    <div class="numb2" onclick="openHelp2b()"><p>2</p></div>
-                    <div class="help2">
-                        <h4 class="help2a" onclick="openHelp2b()">Great Strategic Business Planning</h4>
-                        <p class="help2b" onclick="closeHelp2b()">
-                        At Aria solutions, we've taken the consultancy <br class="break1">
-                        concept one step  further by offering a full service<br class="break1">
-                        management organization with expertise. 
-                        </p>
-                    </div>
-                </div>
-                <div class="wayToHelp3">
-                    <div class="numb3" onclick="openHelp3b()"><p>3</p></div>
-                    <div class="help3">
-                        <h4 class="help3a" onclick="openHelp3b()">Online Marketing Campaigns</h4>
-                        <p class="help3b" onclick="closeHelp3b()">
-                        At Aria solutions, we've taken the consultancy <br class="break1">
-                        concept one step  further by offering a full service<br class="break1">
-                        management organization with expertise. 
-                        </p>
-                    </div>
-                </div>
-                
-                </div>
-            </div>
-        </div>
-        <div class="first-phase first-phase2">
-            <div class="textt">
-                <h4 class="pro">
-                    <span class="business" id="business"  onclick="color1()"><i class="fa fa-th" style="padding-right: 10px;"></i>Business</span>
-                    <span class="expertise" id="expertise" onclick="color2()"><i class="fa fa-th" style="padding-right: 10px;"></i>Expertise</span>
-                    <span class="quality" id="quality"     onclick="color3()"><i class="fa fa-th" style="padding-right: 10px;"></i>Quality</span>
-                </h4>
+        .loader-square {
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            background: var(--aria-green);
+            transform: rotate(45deg);
+        }
 
-                <div class="businesses">
-                    <h4>Business Services For Companies</h4>
-                        <p>
-                        Aria provides the most innovative and customized<br>
-                        business services in the industry.Our <a href="#" class="serv">Services</a> section<br>
-                        shows how flexible we are for all types of budgets. 
-                        </p>
+        .loader-square:nth-child(1) {
+            top: 0;
+            left: 21px;
+            animation: loader-top 1.2s ease-in-out infinite;
+        }
 
-                    <div class="progress-container">
-                        <div class="progress-item">
-                            <div class="progress-title-holder">
-                                <span class="progress-title">Business Development</span>
-                                <span class="progress-number">100%</span>
-                            </div>
-                            <div class="progress-bar-background">
-                                <div class="progress-bar-fill" style="width: 100%;"></div>
-                            </div>
-                        </div>
+        .loader-square:nth-child(2) {
+            bottom: 0;
+            left: 0;
+            animation: loader-left 1.2s ease-in-out infinite;
+        }
 
-                        <div class="progress-item">
-                            <div class="progress-title-holder">
-                                <span class="progress-title">Opportunity Spotting</span>
-                                <span class="progress-number">76%</span>
-                            </div>
-                            <div class="progress-bar-background">
-                                <div class="progress-bar-fill" style="width: 76%;"></div>
-                            </div>
-                        </div>
+        .loader-square:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            animation: loader-right 1.2s ease-in-out infinite;
+        }
 
-                        <div class="progress-item">
-                            <div class="progress-title-holder">
-                                <span class="progress-title">Online Marketing</span>
-                                <span class="progress-number">90%</span>
-                            </div>
-                            <div class="progress-bar-background">
-                                <div class="progress-bar-fill" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!----other text-->
-                <div class="prog-2">
-                    <div class="expertises">
-                        <div class="experts">
-                            <div class="expNumb"><p>1</p></div>
-                            <p class="expText"> 
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit.
-                                Molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
-                            </p>
-                        </div>
-                        <div class="experts">
-                            <div class="expNumb"><p>2</p></div>
-                            <p class="expText">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit.
-                                Molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
-                            </p>
-                        </div>
-                        <div class="experts">
-                            <div class="expNumb"><p>3</p></div>
-                            <p class="expText">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit.
-                                Molestiae ipsum tempora assumenda aspernatur quis! lorem aquem
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="prog-2">
-                    
-                    <div class="qualities">
-                                    <p><span style="color:#14bf98;">Eleifend nisi velit</span> eleifend nisi velit. Aliquam magna tellus, volutpat aliquet tincidunt eget elit vitae viverra auctor nem libero: <a style="color:#14bf98;" href="#your-link">elit vitae viverra auctor</a></p>
-                                    <p><span style="color:#14bf98;">Aliquam magna tellus</span> volutpat aliquet tincidunt eget elit vitae viverra auctor nem libero  eget elit vitae <a style="color:#14bf98;" href="#your-link">lorem ipsumde</a></p>
-                                
-                                    
-                                        <p> <i class="fa fa-square" style="color:#14bf98;"></i>
-                                            Mauris facilisis urna urna, non volutpat tortor rhoncus nec</p>
-                                        
-                                            <p> <i class="fa fa-square" style="color:#14bf98;"></i>
-                                                Mauris facilisis urna urna, non volutpat tortor rhoncus nec</p>
-                                            
-                                            <p> <i class="fa fa-square" style="color:#14bf98;"></i>
-                                                    Mauris facilisis urna urna, non volutpat tortor rhoncus nec</p>
-                                                
-                                        
-                                            <p><i class="fa fa-square" style="color:#14bf98;"></i>
-                                            Mauris facilisis urna urna, non volutpat tortor rho</p>
-                                    
-                                    
-                                            <p><i class="fa fa-square" style="color:#14bf98;"></i>
-                                            Mauris facilisis urna urna, non volutpat tortor rhoncu</p>
-                                    
-                                </div>
-                </div>
-            </div>
-            <div class="fp-image">
-                <img src="images/details-2-background.jpg" alt=" ">
-            </div>
-        </div>
-    </div>
+        .loader-text {
+            color: #fff;
+            font-family: Montserrat, sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
 
+        .loader-progress {
+            width: 150px;
+            height: 3px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.15);
+            border-radius: 999px;
+        }
 
-    <!---FIFTH CONTAINER-->
-    <!-- Testimonials -->
-    <div class="slider-1 bg-gray">
-        <div class=" testimonial-container">
-            <div class="row">
-                <h2 class="h2-heading">Read Our Customer Testimonials</h2>
-                <h4 class="h2-subHead">Our clients are our partners and we cannot imagine a better future for our<br class="break1">
-                    company without helping them reach their objectives
-                </h4>
-            </div> 
+        .loader-progress::before {
+            content: "";
+            display: block;
+            width: 45%;
+            height: 100%;
+            background: var(--aria-green);
+            border-radius: inherit;
+            animation: loader-progress 1.2s ease-in-out infinite;
+        }
 
-            <div class="row">
-                <div class="cardsRow">
+        @keyframes loader-pulse {
+            0%, 100% {
+                transform: scale(0.92);
+            }
 
-                    <!-- Card Slider -->
-                    <div class="slider-container">
-                        <div class="swiper-container card-slider">
-                            <div class="swiper-wrapper">
-                                
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-1.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">
-                                                My goals for using Aria's services seemed high when I first set them but, they've met them with no problems.
-                                            </p>
-                                            <p class="testimonial-author">Jude Thorn - Designer</p>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-2.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">
-                                                The guys from Aria helped with getting my business off the ground, and turning it into a profitable company
-                                            </p>
-                                            <p class="testimonial-author">Roy Smith - Developer</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-3.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">
-                                                I purchased the Growth Accelerator service pack a few years ago and I renew the contract each year.
-                                            </p>
-                                            <p class="testimonial-author">Marsha Singer - Marketer</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-4.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">
-                                               My goals for using Aria's services seemed high when I first set them but, they've met them with no problems.
-                                            </p>
-                                            <p class="testimonial-author">Tim Shaw - Designer</p>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-5.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">
-                                                The guys from Aria helped with getting my business off the ground, and turning it into a profitable company
-                                            </p>
-                                            </p>
-                                            <p class="testimonial-author">Lindsay Spice - Designer</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/testimonial-6.jpg" alt="alternative">
-                                        <div class="card-body">
-                                            <p class="testimonial-text">
-                                                I purchased the Growth Accelerator service pack a few years ago and I renew the contract each year.
-                                            </p>
-                                            <p class="testimonial-author">Ann Black - Developer</p>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-                            
-                            </div> <!-- end of swiper-wrapper -->
-        
-                            <!-- Add Arrows -->
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <!-- end of add arrows -->
-        
-                        </div> <!-- end of swiper-container -->
-                    </div> <!-- end of slider-container -->
-                    <!-- end of card slider -->
+            50% {
+                transform: scale(1);
+            }
+        }
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of slider-1 -->
-    <!-- end of testimonials -->
+        @keyframes loader-top {
+            0%, 100% {
+                transform: translateY(0) rotate(45deg);
+            }
 
+            50% {
+                transform: translateY(-7px) rotate(45deg);
+            }
+        }
 
-    <!--SIXTH CONTAINER-->
-    <div class="sixth-container" id="callme">
-        <div class="sixth-inner">
-            <div class="call-me">
-                <h6>CALL ME</h6>
-                <h4>Have Us Contact You By Filling<br class="break1">
-                    And Submitting The Form
-                </h4>
-                <p class="p1">You are just a few steps away from a personalized offer.Just<br class="break1">
-                    fill in the form and send it to us and we'll get right back with a<br class="break1">
-                    call to help you decide what service package works.
-                </p>
-                <p class="p2"><span><i class="fa fa-square" style="color:#14bf98;"></i></span> It's very easy just fill in the form so we can call</p>
-                <p class="p2"><span><i class="fa fa-square" style="color:#14bf98;"></i></span> During the call we'll require some info about the company</p>
-                <p class="p2"><span><i class="fa fa-square" style="color:#14bf98;"></i></span> Don't hesitate to email us for any questions or inquiries</p>
-            </div>
-            <div class="call-me-form-container">
-            <form action="#" id="callMeForm">
-                <div class="form-group">
-                    <input type="text"  class="form-control"   id="name" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="text"  class="form-control"   id="tel" name="tel" placeholder="Phone" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control"     id="email" name="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <select id="browsers"  class="form-control">
-                    <option value=" " disabled selected>Intrested in...</option>
-                    <option value="analysis">Environmental Analysis</option>
-                    <option value="planning">Develpment Planning</option>
-                    <option value="execeution">Market Execeution</option>
-                </select>
-                </div>
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" required>
-                    <label for="terms">I agree with Aria's stated <a href="#">Privacy Policy</a> and <a href="#">Terms & Conditions</a></label>
-                </div>
-                <button type="submit" class="btn-call-me" id="submit">CALL ME</button>
-            </form>
-            </div>
-        </div>
-    </div>
-   
-   <!--SEVENTH CONTAINER-->
-   <div class="seventh-container" id="projectsz">
-    <div class="seventh-cont">
-     <div class="seventh-inner">
-        <div class="headerr-textt">
-            <h6>PROJECTS</h6>
-            <h3 class="project-header">Projects That We're Proud Of</h3>
-        </div>
-        <div class="show-all" id="projects">
-            <button class="show" id="showall"    onclick="colors1()">SHOW ALL</button>
-            <button class="des" id="design"      onclick="colors2()">DESIGN</button>
-            <button class="des" id="development" onclick="colors3()">DEVELOPMENT</button>
-            <button class="des" id="marketing"   onclick="colors4()">MARKETING</button>
-            <button class="des" id="seo"         onclick="colors5()">SEO</button>
-        </div>
-     </div>
+        @keyframes loader-left {
+            0%, 100% {
+                transform: translateX(0) rotate(45deg);
+            }
 
-     <div class="projects">
-        <div class="project">
-            <div class="project-image-wrapper">
-                <img src="images/project-1.jpg" alt="Projects Categories" class="image1" loading="lazy">
-                
-                <div class="project-overlay">
-                    <div class="overlay-content">
-                        <p class="project-title">Projects Categories</p>
-                        <p class="project-category">Development, Seo</p>
-                    </div>
-                </div>
-           </div>
-        </div>
-        <div class="project">
-            <div class="project-image-wrapper">
-            <img src="images/project-2.jpg" alt="Projects Categories" class="image2"  loading="lazy">
-            
-            <div class="project-overlay">
-                <div class="overlay-content">
-                    <p class="project-title">Projects Categories</p>
-                    <p class="project-category">Development, Marketing, SEO</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="project">
-            <div class="project-image-wrapper">
-            <img src="images/project-3.jpg" alt="Projects Categories"  class="image3"  loading="lazy">
-            
-            <div class="project-overlay">
-                <div class="overlay-content">
-                    <p class="project-title">Projects Categories</p>
-                    <p class="project-category">Development, Marketing</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="project">
-            <div class="project-image-wrapper">
-                <img src="images/project-4.jpg" alt="Projects Categories"  class="image4"  loading="lazy">
-                
-                <div class="project-overlay">
-                    <div class="overlay-content">
-                        <p class="project-title">Projects Categories</p>
-                        <p class="project-category">Development, SEO</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="project">
-            <div class="project-image-wrapper">
-            <img src="images/project-5.jpg" alt="Projects Categories"  class="image5"  loading="lazy">
-            
-            <div class="project-overlay">
-                <div class="overlay-content">
-                    <p class="project-title">Projects Categories</p>
-                    <p class="project-category">Development, Marketing</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="project">
-            <div class="project-image-wrapper">
-            <img src="images/project-6.jpg" alt="Projects Categories"  class="image6" loading="lazy">
-            
-            <div class="project-overlay">
-                <div class="overlay-content">
-                    <p class="project-title">Projects Categories</p>
-                    <p class="project-category">DESIGN, SEO</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="project">
-            <div class="project-image-wrapper">
-            <img src="images/project-7.jpg" alt="Projects Categories"  class="image7"  loading="lazy">
-            
-            <div class="project-overlay">
-                <div class="overlay-content">
-                    <p class="project-title">Projects Categories</p>
-                    <p class="project-category">Design, Development</p>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="project">
-            <div class="project-image-wrapper">
-            <img src="images/project-8.jpg" alt="Projects Categories"  class="image8" loading="lazy">
-            
-            <div class="project-overlay">
-                <div class="overlay-content">
-                    <p class="project-title">Projects Categories</p>
-                    <p class="project-category">Design, Development, SEO</p>
-                </div>
-            </div>
-        </div>
-        </div>
-     </div>
-   </div>
-   </div>
+            50% {
+                transform: translateX(-7px) rotate(45deg);
+            }
+        }
 
-   <!--space taker-->
-    <div class="spaceTaker">
-    .
-    </div>
+        @keyframes loader-right {
+            0%, 100% {
+                transform: translateX(0) rotate(45deg);
+            }
 
-<!--Eight(8th) Container-->
-<div class="Eight-container">
-    <div class="eight-inner">
-        <div class="eight-text">
-            <h5>TEAM</h5>
-            <h3>Our Team Of Consultants</h3>
-            <p>We're only as strong and as knowledgeable as our team.
-                So here are the men<br class="men break1"> and women which help customers meet
-                goals and grow companies
-            </p>
-        </div>
-        <div class="eight-cont">
-            <div class="hex">
-                <div class="hexagon">
-                    <div class="shape">
-                        <img src="images/team-member-3.jpg">
-                </div>
-                </div>
-                <div class="hex-textt">
-                    <p class="team-name">John Whitelong</p>
-                    <p class="team-role">General Manager</p>
-                    </p>
-                    <div class="eight-cont">
-                        <div class="eight-column">
-                            <div class="hex">
-                            <div class="bion">
-                            <div class="bint">
-                                <i class="fa fa-facebook" id="bions" style="color: white;"></i>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                
-                            <div class="eight-column">
-                                <div class="hex">
-                                <div class="bion">
-                                <div class="bint">
-                                    <i class="fa fa-twitter" id="bions" style="color: white;"></i>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                        </div>
-                    
-                </div>
-            </div>
-            <div class="hex">
-            <div class="hexagon">
-                <div class="shape">
-                    <img src="images/team-member-1.jpg">
-            </div>
-            </div>
-            <div class="hex-textt">
-                <p class="team-name">Veronique Smith<p>
-                <p class="team-role">Business Developer</p>
-                
-                <div class="eight-cont">
-                    <div class="eight-column">
-                        <div class="hex">
-                        <div class="bion">
-                        <div class="bint">
-                            <i class="fa fa-facebook" id="bions" style="color: white;"></i>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
+            50% {
+                transform: translateX(7px) rotate(45deg);
+            }
+        }
 
-                        <div class="eight-column">
-                            <div class="hex">
-                            <div class="bion">
-                            <div class="bint">
-                                <i class="fa fa-twitter" id="bions" style="color: white;"></i>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                </div>
-                
-            </div>
-            </div>
-            <div class="hex">
-            <div class="hexagon">
-                <div class="shape">
-                    <img src="images/team-member-2.jpg">
-            </div>
-            </div>
-            <div class="hex-textt">
-                <p class="team-name">Chris Zimerman</p>
-                <p class="team-role">Online Marketer</p>
-                
-                <div class="eight-cont">
-                    <div class="eight-column">
-                        <div class="hex">
-                        <div class="bion">
-                        <div class="bint">
-                            <i class="fa fa-facebook" id="bions" style="color: white;"></i>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
+        @keyframes loader-progress {
+            0% {
+                transform: translateX(-150%);
+            }
 
-                        <div class="eight-column">
-                            <div class="hex">
-                            <div class="bion">
-                            <div class="bint">
-                                <i class="fa fa-twitter" id="bions" style="color: white;"></i>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                    </div>
-                
-            </div>
-            </div>
-            <div class="hex">
-            <div class="hexagon">
-                <div class="shape">
-                    <img src="images/team-member-4.jpg">
-            </div>
-            </div>
-            <div class="hex-textt">
-                <p class="team-name">Mary Villalonga</p>
-                <p class="team-role">Community Manager</p>
-                
-                <div class="eight-cont">
-                    <div class="eight-column">
-                        <div class="hex">
-                        <div class="bion">
-                        <div class="bint">
-                            <i class="fa fa-facebook" id="bions" style="color: white;"></i>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
+            50% {
+                transform: translateX(100%);
+            }
 
-                        <div class="eight-column">
-                            <div class="hex">
-                            <div class="bion">
-                            <div class="bint">
-                                <i class="fa fa-twitter" id="bions" style="color: white;"></i>
-                            </div>
-                            </div>
-                            </div>
-                            </div>
-                    </div>
-                
-                
-            </div>
-            </div>
-        </div>
-    </div>
-</div>
+            100% {
+                transform: translateX(300%);
+            }
+        }
 
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
 
-   <!--Ninth Container-->
-   <div class="ninth-container">
-    <div class="ninth-inner" id="about">
-        <div class="ninth-image">
-            <img src="images/about.jpg" alt=" ">
-        </div>
-        <div class="ninth-cont" >
-           <h6>ABOUT</h6> 
-           <h3>We're Passionate About<br> Delivering Growth Services</h3>
-           <p>Our goal is to provide the right business growth services at<br class="mens break1">
-             the appropriate time so companies can benefit from the <br class="mens break1">
-             created momentum and thrive for a long period of time.
-           </p>
-            <div class="aboutTextWrapper">
-                <div class="aboutText">
-                    <div class="squareicon"></div>
-                    <p>Everything we recommend has direct positive impact.</p>
-                </div>
-                <div class="aboutText">
-                    <div class="squareicon"></div>
-                    <p>You will become an important partner of our company</p>
-                </div> 
-            </div>
-           
-            <div class="ninth-numbers">
-                <div class="number">
-                    <h1 class="numbers-1" id="numbers-1">231</h1>
-                    <div class="numb">
-                        <span class="numb-text">Happy</span>
-                        <span class="numb-text">Users</span>
-                    </div>
-                </div>
-                <div class="number">
-                    <h1 class="numbers-2">121</h1>
-                    <div class="numb">
-                        <span class="numb-text">Issues</span>
-                        <span class="numb-text">Solved</span>
-                    </div>
-                </div>
-                <div class="number">
-                    <h1 class="numbers-3">159</h1>
-                    <div class="numb">
-                        <span class="numb-text">Good</span>
-                        <span class="numb-text">Reviews</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   </div>
+        /* Accessibility utility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
 
-
-   <!--Tenth Container-->
-   <div class="tenth-container" id="contactz">
-    <div class="tenth-inner">
-        <div  class="contact-us" id="contact">
-           <h6>CONTACT</h6>
-           <h4>Get In Touch Using The Form</h4>
-           <p class="contact-p">You can stop by our office for a cup of coffee and just use the<br class="mens break1">
-           contact form below for any questions and inquiries.
-           </p>
-           <div class="addressLine">
-                <i class="fa fa-map-marker" style="color:#14bf98 ;"></i>
-                <p>22nd Innovative Street, San Francisco, CA 94043, USA.</p>
-           </div>
-           <div class="phoneLines">
-                <div class="phoneLine">
-                    <i class="fa fa-phone" style="color:#14bf98 ;"></i>
-                    <p>+81 720 22 126</p>
-                </div>
-                <div class="phoneLine">
-                    <i class="fa fa-phone" style="color:#14bf98 ;"></i>
-                    <p>+81 720 22 126</p>
-                </div>
-                <div class="phoneLine">
-                    <i class="fa fa-envelope"  style="color:#14bf98 ;"></i>
-                    <a href="mailto:djsteplion@gmail.com">office@aria.com</a>
-                </div>
-           </div>
-
-            <h5 class="followAria">Follow  Aria  On Social Media</h5>
-            <div class="social-media">
-                <div class="social1">
-                    <div class="third-column">
-                        <div class="hex">
-                         <div class="bunt">
-                         <div class="bint">
-                             <i class="fa fa-facebook" id="bunts" style="color: white;"></i>
-                         </div>
-                         </div>
-                        </div>
-                        </div>
-            
-                       
-                </div>
-                <div class="social1">
-                    <div class="third-column">
-                        <div class="hex">
-                         <div class="bunt">
-                         <div class="bint">
-                             <i class="fa fa-twitter" id="bunts" style="color: white;"></i>
-                         </div>
-                         </div>
-                        </div>
-                        </div>
-            
-                       
-                </div>
-                <div class="social1">
-                    <div class="third-column">
-                        <div class="hex">
-                         <div class="bunt">
-                         <div class="bint">
-                             <i class="fa fa-pinterest" id="bunts" style="color: white;"></i>
-                         </div>
-                         </div>
-                        </div>
-                        </div>
-            
-                       
-                </div>
-                <div class="social1">
-                    <div class="third-column">
-                        <div class="hex">
-                         <div class="bunt">
-                         <div class="bint">
-                             <i class="fa fa-instagram" id="bunts" style="color: white;"></i>
-                         </div>
-                         </div>
-                        </div>
-                        </div>
-                </div>
-                <div class="social1">
-                    <div class="third-column">
-                        <div class="hex">
-                         <div class="bunt">
-                         <div class="bint">
-                             <i class="fa fa-linkedin" id="bunts" style="color: white;"></i>
-                         </div>
-                         </div>
-                        </div>
-                        </div>
-                </div>
-                <div class="social1">
-                    <div class="third-column">
-                        <div class="hex">
-                         <div class="bunt">
-                         <div class="bint">
-                             <i class="fa fa-google" id="bunts" style="color: white;"></i>
-                         </div>
-                         </div>
-                        </div>
-                        </div>
-                </div>
-                
-            </div>
-
-
-        
-        </div>
-
-        <div class="contact-form-container">
-            <form action="#" id="contactForm">
-                <div class="form-group2">
-                    <input type="text" class="form-control2"  name="name" placeholder="Name">
-                </div>
-                <div class="form-group2">
-                    <input type="email" class="form-control2" name="email" placeholder="Email">
-                </div>
-                <div class="form-group2">
-                    <textarea name="message" class="form-control2" rows="6" cols="30"  placeholder="Your Message"></textarea>
-                </div>
-                <div class="form-group2 checkbox-group2">
-                    <input type="checkbox"  name="terms">
-                    <label for="contactTerms" class="contactTerms">I agree with Aria's stated <a href="#">Privacy Policy</a>
-                     and <a href="#">Terms & Conditions</a>
-                    </label>
-                </div>
-                <button type="submit"   class="btn-submit-contact">SUBMIT MESSAGE</button>
-               </form>
-        </div>
-    </div>
-   </div>
-
-<!---Eleventh Container-->
-
-<div class="eleventh-container">
-    <div class="eleventh-in">
-        <div class="eleventh-inner">
-            <div class="few-words">
-            <h5>Few Words About Aria</h5>
-            <p>We're passionate about delivering the best business growth<br class="break1">
-                services for companies just starting out as startups or industry<br class="break1">
-                players that have established their market position a long time ago.
-            </p>
-            </div>
-            <div class="linksz">
-                <h5>Links</h5>
-                <a href="#">startupguide.com</a>
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-            </div>
-            <div class="tools">
-                <h5>Tools</h5>
-                <a href="#">businessgrowth.com</a>
-                <a href="#">influencers.com</a>
-                <a href="#">optimizer.net</a>
-            </div>
-            <div class="partners">
-                <h5>Partners</h5>
-                <a href="#">unicorns.com</a>
-                <a href="#">staffmanager.com</a>
-                <a href="#">association.gov</a>
-            </div>
-        </div>
-        <div class="copy-right">
-            <p>&copy; 2023 Coded by Olayiwola Stephen</p>
-        </div>
-    </div>
-</div>
-
-    <script src="js/script.js"></script>
-    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    
+        /* Visible keyboard focus */
+        :focus-visible {
+            outline: 3px solid var(--aria-green);
+            outline-offset: 4px;
+        }
+    </style>
 
     <script>
-/* Card Slider - Swiper */
-var cardSlider = new Swiper('.card-slider', {
-	autoplay: {
-		delay: 4000,
-		disableOnInteraction: false
-	},
-	loop: true,
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	},
-	slidesPerView: 3,
-	spaceBetween: 70,
-	breakpoints: {
-		// when window is <= 767px
-		767: {
-			slidesPerView: 1
-		},
-		// when window is <= 991px
-		991: {
-			slidesPerView: 2,
-			spaceBetween: 40
-		}
-	}
-});
+        document.documentElement.classList.add("is-loading");
+    </script>
+</head>
 
+<body class="is-loading">
+
+    <!-- PAGE LOADER -->
+    <div
+        id="page-loader"
+        role="status"
+        aria-live="polite"
+        aria-label="Loading Aria website"
+    >
+        <div class="loader-content">
+            <div class="loader-logo" aria-hidden="true">
+                <span class="loader-square"></span>
+                <span class="loader-square"></span>
+                <span class="loader-square"></span>
+            </div>
+
+            <span class="loader-text">
+                Loading Aria
+            </span>
+
+            <div
+                class="loader-progress"
+                aria-hidden="true"
+            ></div>
+        </div>
+    </div>
+
+    <!-- Skip navigation -->
+    <a
+        href="#main-content"
+        class="sr-only"
+        id="skip-link"
+    >
+        Skip to main content
+    </a>
+
+    <!-- MOBILE NAVIGATION -->
+    <aside
+        class="mySidenav"
+        id="sidenav"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+    >
+        <button
+            type="button"
+            class="closebtn down"
+            id="close-menu"
+            aria-label="Close navigation menu"
+        >
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <nav aria-label="Mobile menu">
+            <a href="#home" class="linkss">HOME</a>
+            <a href="#introz" class="linkss">INTRO</a>
+            <a href="#callme" class="linkss">CALL ME</a>
+            <a href="#servicesz" class="linkss">SERVICES</a>
+            <a href="#projectsz" class="linkss">PROJECTS</a>
+            <a href="#about" class="linkss">ABOUT</a>
+            <a href="#contactz" class="linkss">CONTACT</a>
+        </nav>
+    </aside>
+
+    <!-- HEADER / HERO -->
+    <header id="home">
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="images/header-background.jpg"
+            class="hero-video"
+            aria-hidden="true"
+            tabindex="-1"
+        >
+            <source
+                src="video/www.ssvid.net--Moraine-Lake-Lodge-in-Banff-National-Park_720p.mp4"
+                type="video/mp4"
+            >
+        </video>
+
+        <div class="first-inner">
+
+            <div
+                class="hero-overlay"
+                aria-hidden="true"
+            ></div>
+
+            <div class="header-container">
+
+                <!-- NAVIGATION -->
+                <nav
+                    class="navsbar"
+                    aria-label="Primary navigation"
+                >
+
+                    <a
+                        class="navbar-brand logo-container"
+                        href="#home"
+                        aria-label="Aria home"
+                    >
+                        <span
+                            class="logo-icon"
+                            aria-hidden="true"
+                        >
+                            <span class="sq sq-1"></span>
+                            <span class="sq sq-2"></span>
+                            <span class="sq sq-3"></span>
+                        </span>
+
+                        <span class="logo-text">
+                            Aria
+                        </span>
+                    </a>
+
+                    <div class="links">
+
+                        <a href="#home" class="linkss">HOME</a>
+                        <a href="#introz" class="linkss">INTRO</a>
+                        <a href="#servicesz" class="linkss">SERVICES</a>
+                        <a href="#callme" class="linkss">CALL ME</a>
+                        <a href="#projectsz" class="linkss">PROJECTS</a>
+                        <a href="#about" class="linkss">ABOUT</a>
+                        <a href="#contactz" class="linkss">CONTACT</a>
+
+                        <div class="socialLinks">
+                            <a
+                                href="#"
+                                class="soContainer"
+                                aria-label="Aria on Twitter"
+                                rel="noopener noreferrer"
+                            >
+                                <span aria-hidden="true">𝕏</span>
+                            </a>
+
+                            <a
+                                href="#"
+                                class="soContainer"
+                                aria-label="Aria on Facebook"
+                                rel="noopener noreferrer"
+                            >
+                                <span aria-hidden="true">f</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <button
+                        type="button"
+                        class="menu"
+                        id="menu"
+                        aria-label="Open navigation menu"
+                        aria-controls="sidenav"
+                        aria-expanded="false"
+                    >
+                        <span aria-hidden="true">&#9776;</span>
+                    </button>
+
+                </nav>
+
+                <!-- HERO CONTENT -->
+                <div class="home-text">
+
+                    <h1>
+                        Business Solutions
+                    </h1>
+
+                    <p>
+                        Aria is a top consultancy company specializing
+                        in business growth using online marketing and
+                        conversion optimization tactics.
+                    </p>
+
+                    <div class="discover">
+                        <a href="#introz">
+                            Discover
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <a
+            href="#introz"
+            class="mouse-scroll"
+            aria-label="Scroll to introduction"
+        >
+            <span
+                class="mouse"
+                aria-hidden="true"
+            >
+                <span class="wheel"></span>
+            </span>
+
+            <span class="scroll-text">
+                Scroll down
+            </span>
+        </a>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+
+        <!-- INTRO -->
+        <section
+            class="second-container"
+            id="introz"
+            aria-labelledby="intro-heading"
+        >
+
+            <div class="first-column-text">
+
+                <p
+                    class="section-label"
+                    id="intro"
+                >
+                    INTRO
+                </p>
+
+                <h2 id="intro-heading">
+                    We Offer Some Of The Best Business Growth Services In Town
+                </h2>
+
+                <p>
+                    Launching a new company or developing the market
+                    position of an existing one can be quite an
+                    overwhelming process at times.
+                </p>
+
+                <blockquote>
+                    <p>
+                        Our mission here at Aria is to get you through
+                        those tough moments relying on our team's
+                        expertise in starting and growing companies.
+                    </p>
+
+                    <cite>
+                        Louise Donovan — CEO
+                    </cite>
+                </blockquote>
+
+            </div>
+
+            <div class="first-column-img">
+
+                <img
+                    src="images/intro-office.jpg"
+                    alt="Aria consultants working together in an office"
+                    width="800"
+                    height="533"
+                    loading="lazy"
+                    decoding="async"
+                >
+
+            </div>
+
+        </section>
+
+        <!-- BUSINESS PROCESS -->
+        <section
+            class="ede-container"
+            aria-labelledby="process-heading"
+        >
+
+            <h2
+                id="process-heading"
+                class="sr-only"
+            >
+                Our Business Growth Process
+            </h2>
+
+            <article class="third-column">
+
+                <div
+                    class="hex"
+                    aria-hidden="true"
+                >
+                    <div class="binos">
+                        <div class="bint">
+                            <span aria-hidden="true">◉</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>
+                    Environmental Analysis
+                </h3>
+
+                <p>
+                    The starting point of any success story is knowing
+                    your current position in the business environment.
+                </p>
+
+            </article>
+
+            <article class="third-column">
+
+                <div
+                    class="hex"
+                    aria-hidden="true"
+                >
+                    <div class="binos">
+                        <div class="bint">
+                            <span aria-hidden="true">☷</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>
+                    Development Planning
+                </h3>
+
+                <p>
+                    After completing the environmental analysis,
+                    the next stage is to design and plan your
+                    development strategy.
+                </p>
+
+            </article>
+
+            <article class="third-column">
+
+                <div
+                    class="hex"
+                    aria-hidden="true"
+                >
+                    <div class="binos">
+                        <div class="bint">
+                            <span aria-hidden="true">◔</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>
+                    Execution & Evaluation
+                </h3>
+
+                <p>
+                    In this phase you will focus on executing the
+                    action plan and evaluating the results after
+                    each marketing campaign.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- SERVICES -->
+        <section
+            class="third-container"
+            id="servicesz"
+            aria-labelledby="services-heading"
+        >
+
+            <div class="third-contain">
+
+                <div class="third-conti">
+
+                    <p id="services">
+                        SERVICES
+                    </p>
+
+                    <h2
+                        class="choose"
+                        id="services-heading"
+                    >
+                        Choose The Service Package That Suits Your Needs
+                    </h2>
+
+                </div>
+
+                <div class="third-inner">
+
+                    <article class="third-cont1">
+
+                        <div
+                            class="picture1"
+                            role="img"
+                            aria-label="Business startup consultation"
+                        ></div>
+
+                        <div class="texts">
+
+                            <h3>
+                                Off The Ground
+                            </h3>
+
+                            <div class="inText">
+
+                                <p class="subtext">
+                                    Perfect for fresh ideas or young
+                                    startups, this package will help
+                                    get the business off the ground.
+                                </p>
+
+                                <ul class="featureList">
+                                    <li>
+                                        Environment and competition
+                                    </li>
+                                    <li>
+                                        Designing the marketing plan
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <p class="price">
+                                <strong>
+                                    Starting at
+                                    <span>$199</span>
+                                </strong>
+                            </p>
+
+                            <button
+                                type="button"
+                                class="detel"
+                            >
+                                Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="third-cont2">
+
+                        <div
+                            class="picture2"
+                            role="img"
+                            aria-label="Business growth consultation"
+                        ></div>
+
+                        <div class="texts">
+
+                            <h3>
+                                Accelerated Growth
+                            </h3>
+
+                            <div class="inText">
+
+                                <p class="subtext">
+                                    Use this service pack to give your
+                                    company the necessary impulse
+                                    to become an industry leader.
+                                </p>
+
+                                <ul class="featureList">
+                                    <li>
+                                        Business strategy planning
+                                    </li>
+                                    <li>
+                                        Taking the planned actions
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <p class="price">
+                                <strong>
+                                    Starting at
+                                    <span>$299</span>
+                                </strong>
+                            </p>
+
+                            <button
+                                type="button"
+                                class="detel"
+                            >
+                                Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <article class="third-cont3">
+
+                        <div
+                            class="picture3"
+                            role="img"
+                            aria-label="Market domination consultation"
+                        ></div>
+
+                        <div class="texts">
+
+                            <h3>
+                                Market Domination
+                            </h3>
+
+                            <div class="inText">
+
+                                <p class="subtext">
+                                    You already are a reference point
+                                    in your industry. Now you need to
+                                    learn about acquisitions.
+                                </p>
+
+                                <ul class="featureList">
+                                    <li>
+                                        Maintaining the leader status
+                                    </li>
+                                    <li>
+                                        Acquisitions the right way
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <p class="price">
+                                <strong>
+                                    Starting at
+                                    <span>$299</span>
+                                </strong>
+                            </p>
+
+                            <button
+                                type="button"
+                                class="detel"
+                            >
+                                Details
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BUSINESS GROWTH -->
+        <section
+            class="fourth-container"
+            aria-labelledby="growth-heading"
+        >
+
+            <div class="first-phase">
+
+                <div class="fp-image">
+
+                    <img
+                        src="images/details-1-background.jpg"
+                        alt="Business team discussing growth strategy"
+                        width="1200"
+                        height="800"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+                <div class="textt">
+
+                    <div class="progs">
+
+                        <h2 id="growth-heading">
+                            Accelerate Business Growth To Improve Revenue Numbers
+                        </h2>
+
+                        <article class="wayToHelp1">
+
+                            <div class="numb1" aria-hidden="true">
+                                <span>1</span>
+                            </div>
+
+                            <div class="help1">
+
+                                <h3 class="help1a">
+                                    How Can Aria Help Your Business
+                                </h3>
+
+                                <p class="help1b">
+                                    At Aria solutions, we've taken the
+                                    consultancy concept one step further
+                                    by offering a full service management
+                                    organization with expertise.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                        <article class="wayToHelp2">
+
+                            <button
+                                type="button"
+                                class="numb2"
+                                aria-expanded="false"
+                                aria-controls="help2-content"
+                            >
+                                <span>2</span>
+                            </button>
+
+                            <div class="help2">
+
+                                <h3>
+                                    Great Strategic Business Planning
+                                </h3>
+
+                                <div
+                                    id="help2-content"
+                                    class="help2b"
+                                    hidden
+                                >
+                                    <p>
+                                        At Aria solutions, we've taken
+                                        the consultancy concept one step
+                                        further by offering a full service
+                                        management organization with expertise.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <article class="wayToHelp3">
+
+                            <button
+                                type="button"
+                                class="numb3"
+                                aria-expanded="false"
+                                aria-controls="help3-content"
+                            >
+                                <span>3</span>
+                            </button>
+
+                            <div class="help3">
+
+                                <h3>
+                                    Online Marketing Campaigns
+                                </h3>
+
+                                <div
+                                    id="help3-content"
+                                    class="help3b"
+                                    hidden
+                                >
+                                    <p>
+                                        At Aria solutions, we've taken
+                                        the consultancy concept one step
+                                        further by offering a full service
+                                        management organization with expertise.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SECOND GROWTH AREA -->
+            <div class="first-phase first-phase2">
+
+                <div class="textt">
+
+                    <div
+                        class="pro"
+                        role="tablist"
+                        aria-label="Business information"
+                    >
+
+                        <button
+                            type="button"
+                            class="business"
+                            id="business"
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="business-panel"
+                        >
+                            Business
+                        </button>
+
+                        <button
+                            type="button"
+                            class="expertise"
+                            id="expertise"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="expertise-panel"
+                        >
+                            Expertise
+                        </button>
+
+                        <button
+                            type="button"
+                            class="quality"
+                            id="quality"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="quality-panel"
+                        >
+                            Quality
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="business-panel"
+                        class="businesses"
+                        role="tabpanel"
+                        aria-labelledby="business"
+                    >
+
+                        <h3>
+                            Business Services For Companies
+                        </h3>
+
+                        <p>
+                            Aria provides innovative and customized
+                            business services in the industry.
+                            Our services section shows how flexible
+                            we are for all types of budgets.
+                        </p>
+
+                        <div class="progress-container">
+
+                            <div class="progress-item">
+
+                                <div class="progress-title-holder">
+                                    <span>
+                                        Business Development
+                                    </span>
+
+                                    <span>
+                                        100%
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="progress-bar-background"
+                                    role="progressbar"
+                                    aria-label="Business Development"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    aria-valuenow="100"
+                                >
+                                    <div
+                                        class="progress-bar-fill"
+                                        style="width:100%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <div class="progress-item">
+
+                                <div class="progress-title-holder">
+                                    <span>
+                                        Opportunity Spotting
+                                    </span>
+
+                                    <span>
+                                        76%
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="progress-bar-background"
+                                    role="progressbar"
+                                    aria-label="Opportunity Spotting"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    aria-valuenow="76"
+                                >
+                                    <div
+                                        class="progress-bar-fill"
+                                        style="width:76%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                            <div class="progress-item">
+
+                                <div class="progress-title-holder">
+                                    <span>
+                                        Online Marketing
+                                    </span>
+
+                                    <span>
+                                        90%
+                                    </span>
+                                </div>
+
+                                <div
+                                    class="progress-bar-background"
+                                    role="progressbar"
+                                    aria-label="Online Marketing"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                    aria-valuenow="90"
+                                >
+                                    <div
+                                        class="progress-bar-fill"
+                                        style="width:90%"
+                                    ></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="expertise-panel"
+                        class="prog-2"
+                        role="tabpanel"
+                        aria-labelledby="expertise"
+                        hidden
+                    >
+
+                        <div class="expertises">
+
+                            <article class="experts">
+                                <div class="expNumb">
+                                    <span>1</span>
+                                </div>
+                                <p class="expText">
+                                    Our consultants analyze your business
+                                    environment and identify practical
+                                    opportunities for growth.
+                                </p>
+                            </article>
+
+                            <article class="experts">
+                                <div class="expNumb">
+                                    <span>2</span>
+                                </div>
+                                <p class="expText">
+                                    We develop strategies based on your
+                                    organization's goals and market position.
+                                </p>
+                            </article>
+
+                            <article class="experts">
+                                <div class="expNumb">
+                                    <span>3</span>
+                                </div>
+                                <p class="expText">
+                                    We help execute, measure, and optimize
+                                    your business growth initiatives.
+                                </p>
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="quality-panel"
+                        class="prog-2"
+                        role="tabpanel"
+                        aria-labelledby="quality"
+                        hidden
+                    >
+
+                        <div class="qualities">
+
+                            <p>
+                                Everything we recommend is designed to
+                                create a positive impact.
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Practical business strategies
+                                </li>
+                                <li>
+                                    Customized growth solutions
+                                </li>
+                                <li>
+                                    Data-driven decision making
+                                </li>
+                                <li>
+                                    Long-term business partnerships
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="fp-image">
+
+                    <img
+                        src="images/details-2-background.jpg"
+                        alt="Consultant presenting business strategy"
+                        width="1200"
+                        height="800"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section
+            class="slider-1 bg-gray"
+            aria-labelledby="testimonials-heading"
+        >
+
+            <div class="testimonial-container">
+
+                <div class="row">
+
+                    <h2
+                        class="h2-heading"
+                        id="testimonials-heading"
+                    >
+                        Read Our Customer Testimonials
+                    </h2>
+
+                    <p class="h2-subHead">
+                        Our clients are our partners and we cannot imagine
+                        a better future for our company without helping them
+                        reach their objectives.
+                    </p>
+
+                </div>
+
+                <div class="slider-container">
+
+                    <div
+                        class="swiper-container card-slider"
+                        aria-roledescription="carousel"
+                        aria-label="Customer testimonials"
+                    >
+
+                        <div class="swiper-wrapper">
+
+                            <article class="swiper-slide">
+
+                                <div class="card">
+
+                                    <img
+                                        class="card-image"
+                                        src="images/testimonial-1.jpg"
+                                        alt="Jude Thorn"
+                                        width="300"
+                                        height="300"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+
+                                    <div class="card-body">
+
+                                        <p class="testimonial-text">
+                                            My goals for using Aria's services
+                                            seemed high when I first set them
+                                            but they've met them with no problems.
+                                        </p>
+
+                                        <p class="testimonial-author">
+                                            Jude Thorn — Designer
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                            <article class="swiper-slide">
+
+                                <div class="card">
+
+                                    <img
+                                        class="card-image"
+                                        src="images/testimonial-2.jpg"
+                                        alt="Roy Smith"
+                                        width="300"
+                                        height="300"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+
+                                    <div class="card-body">
+
+                                        <p class="testimonial-text">
+                                            The guys from Aria helped with
+                                            getting my business off the ground
+                                            and turning it into a profitable company.
+                                        </p>
+
+                                        <p class="testimonial-author">
+                                            Roy Smith — Developer
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                            <article class="swiper-slide">
+
+                                <div class="card">
+
+                                    <img
+                                        class="card-image"
+                                        src="images/testimonial-3.jpg"
+                                        alt="Marsha Singer"
+                                        width="300"
+                                        height="300"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+
+                                    <div class="card-body">
+
+                                        <p class="testimonial-text">
+                                            I purchased the Growth Accelerator
+                                            service pack a few years ago and
+                                            renew the contract each year.
+                                        </p>
+
+                                        <p class="testimonial-author">
+                                            Marsha Singer — Marketer
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                            <article class="swiper-slide">
+
+                                <div class="card">
+
+                                    <img
+                                        class="card-image"
+                                        src="images/testimonial-4.jpg"
+                                        alt="Tim Shaw"
+                                        width="300"
+                                        height="300"
+                                        loading="lazy"
+                                        decoding="async"
+                                    >
+
+                                    <div class="card-body">
+
+                                        <p class="testimonial-text">
+                                            My goals for using Aria's services
+                                            seemed high when I first set them
+                                            but they've met them with no problems.
+                                        </p>
+
+                                        <p class="testimonial-author">
+                                            Tim Shaw — Designer
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            class="swiper-button-prev"
+                            aria-label="Previous testimonial"
+                        ></button>
+
+                        <button
+                            type="button"
+                            class="swiper-button-next"
+                            aria-label="Next testimonial"
+                        ></button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CALL ME -->
+        <section
+            class="sixth-container"
+            id="callme"
+            aria-labelledby="callme-heading"
+        >
+
+            <div class="sixth-inner">
+
+                <div class="call-me">
+
+                    <p>
+                        CALL ME
+                    </p>
+
+                    <h2 id="callme-heading">
+                        Have Us Contact You By Filling And Submitting The Form
+                    </h2>
+
+                    <p class="p1">
+                        You are just a few steps away from a personalized
+                        offer. Fill in the form and send it to us and
+                        we'll get right back with a call to help you
+                        decide what service package works.
+                    </p>
+
+                    <ul>
+                        <li>
+                            It's very easy — just fill in the form so we can call.
+                        </li>
+
+                        <li>
+                            During the call we'll require some information
+                            about the company.
+                        </li>
+
+                        <li>
+                            Don't hesitate to email us with any questions
+                            or inquiries.
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="call-me-form-container">
+
+                    <form
+                        action="#"
+                        method="post"
+                        id="callMeForm"
+                    >
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="tel">
+                                Phone number
+                            </label>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="tel"
+                                name="tel"
+                                autocomplete="tel"
+                                inputmode="tel"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="browsers">
+                                Service you're interested in
+                            </label>
+
+                            <select
+                                id="browsers"
+                                name="service"
+                                class="form-control"
+                                required
+                            >
+
+                                <option
+                                    value=""
+                                    disabled
+                                    selected
+                                >
+                                    Select a service
+                                </option>
+
+                                <option value="analysis">
+                                    Environmental Analysis
+                                </option>
+
+                                <option value="planning">
+                                    Development Planning
+                                </option>
+
+                                <option value="execution">
+                                    Market Execution
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group checkbox-group">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                            >
+
+                            <label for="terms">
+                                I agree with Aria's
+                                <a href="/privacy-policy.html">
+                                    Privacy Policy
+                                </a>
+                                and
+                                <a href="/terms.html">
+                                    Terms & Conditions
+                                </a>.
+                            </label>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn-call-me"
+                            id="submit"
+                        >
+                            Call me
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECTS -->
+        <section
+            class="seventh-container"
+            id="projectsz"
+            aria-labelledby="projects-heading"
+        >
+
+            <div class="seventh-cont">
+
+                <div class="seventh-inner">
+
+                    <div class="headerr-textt">
+
+                        <p>
+                            PROJECTS
+                        </p>
+
+                        <h2
+                            class="project-header"
+                            id="projects-heading"
+                        >
+                            Projects That We're Proud Of
+                        </h2>
+
+                    </div>
+
+                    <div
+                        class="show-all"
+                        id="projects"
+                        role="group"
+                        aria-label="Filter projects"
+                    >
+
+                        <button
+                            type="button"
+                            class="show"
+                            id="showall"
+                            aria-pressed="true"
+                        >
+                            Show all
+                        </button>
+
+                        <button
+                            type="button"
+                            class="des"
+                            id="design"
+                            aria-pressed="false"
+                        >
+                            Design
+                        </button>
+
+                        <button
+                            type="button"
+                            class="des"
+                            id="development"
+                            aria-pressed="false"
+                        >
+                            Development
+                        </button>
+
+                        <button
+                            type="button"
+                            class="des"
+                            id="marketing"
+                            aria-pressed="false"
+                        >
+                            Marketing
+                        </button>
+
+                        <button
+                            type="button"
+                            class="des"
+                            id="seo"
+                            aria-pressed="false"
+                        >
+                            SEO
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="projects">
+
+                    <article class="project">
+                        <div class="project-image-wrapper">
+
+                            <img
+                                src="images/project-1.jpg"
+                                alt="Business development project"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <div class="project-overlay">
+
+                                <div class="overlay-content">
+
+                                    <h3 class="project-title">
+                                        Business Development
+                                    </h3>
+
+                                    <p class="project-category">
+                                        Development, SEO
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image-wrapper">
+
+                            <img
+                                src="images/project-2.jpg"
+                                alt="Marketing and SEO project"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <div class="project-overlay">
+
+                                <div class="overlay-content">
+
+                                    <h3 class="project-title">
+                                        Marketing Project
+                                    </h3>
+
+                                    <p class="project-category">
+                                        Development, Marketing, SEO
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image-wrapper">
+
+                            <img
+                                src="images/project-3.jpg"
+                                alt="Development and marketing project"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <div class="project-overlay">
+
+                                <div class="overlay-content">
+
+                                    <h3 class="project-title">
+                                        Growth Project
+                                    </h3>
+
+                                    <p class="project-category">
+                                        Development, Marketing
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project-image-wrapper">
+
+                            <img
+                                src="images/project-4.jpg"
+                                alt="SEO development project"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                                decoding="async"
+                            >
+
+                            <div class="project-overlay">
+
+                                <div class="overlay-content">
+
+                                    <h3 class="project-title">
+                                        SEO Development
+                                    </h3>
+
+                                    <p class="project-category">
+                                        Development, SEO
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TEAM -->
+        <section
+            class="Eight-container"
+            aria-labelledby="team-heading"
+        >
+
+            <div class="eight-inner">
+
+                <div class="eight-text">
+
+                    <p>
+                        TEAM
+                    </p>
+
+                    <h2 id="team-heading">
+                        Our Team Of Consultants
+                    </h2>
+
+                    <p>
+                        We're only as strong and as knowledgeable as our
+                        team. Here are the men and women who help customers
+                        meet goals and grow companies.
+                    </p>
+
+                </div>
+
+                <div class="eight-cont">
+
+                    <article class="hex">
+
+                        <div class="hexagon">
+
+                            <div class="shape">
+
+                                <img
+                                    src="images/team-member-3.jpg"
+                                    alt="John Whitelong, General Manager"
+                                    width="400"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="hex-textt">
+
+                            <h3 class="team-name">
+                                John Whitelong
+                            </h3>
+
+                            <p class="team-role">
+                                General Manager
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="hex">
+
+                        <div class="hexagon">
+
+                            <div class="shape">
+
+                                <img
+                                    src="images/team-member-1.jpg"
+                                    alt="Veronique Smith, Business Developer"
+                                    width="400"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="hex-textt">
+
+                            <h3 class="team-name">
+                                Veronique Smith
+                            </h3>
+
+                            <p class="team-role">
+                                Business Developer
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="hex">
+
+                        <div class="hexagon">
+
+                            <div class="shape">
+
+                                <img
+                                    src="images/team-member-2.jpg"
+                                    alt="Chris Zimerman, Online Marketer"
+                                    width="400"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="hex-textt">
+
+                            <h3 class="team-name">
+                                Chris Zimerman
+                            </h3>
+
+                            <p class="team-role">
+                                Online Marketer
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="hex">
+
+                        <div class="hexagon">
+
+                            <div class="shape">
+
+                                <img
+                                    src="images/team-member-4.jpg"
+                                    alt="Mary Villalonga, Community Manager"
+                                    width="400"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="hex-textt">
+
+                            <h3 class="team-name">
+                                Mary Villalonga
+                            </h3>
+
+                            <p class="team-role">
+                                Community Manager
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section
+            class="ninth-container"
+            id="about"
+            aria-labelledby="about-heading"
+        >
+
+            <div class="ninth-inner">
+
+                <div class="ninth-image">
+
+                    <img
+                        src="images/about.jpg"
+                        alt="Aria consultancy team collaborating"
+                        width="1000"
+                        height="700"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+                <div class="ninth-cont">
+
+                    <p>
+                        ABOUT
+                    </p>
+
+                    <h2 id="about-heading">
+                        We're Passionate About Delivering Growth Services
+                    </h2>
+
+                    <p>
+                        Our goal is to provide the right business growth
+                        services at the appropriate time so companies can
+                        benefit from the created momentum and thrive for
+                        a long period of time.
+                    </p>
+
+                    <div class="aboutTextWrapper">
+
+                        <div class="aboutText">
+                            <div
+                                class="squareicon"
+                                aria-hidden="true"
+                            ></div>
+
+                            <p>
+                                Everything we recommend has direct
+                                positive impact.
+                            </p>
+                        </div>
+
+                        <div class="aboutText">
+                            <div
+                                class="squareicon"
+                                aria-hidden="true"
+                            ></div>
+
+                            <p>
+                                You will become an important partner
+                                of our company.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="ninth-numbers">
+
+                        <div class="number">
+
+                            <strong class="numbers-1">
+                                231
+                            </strong>
+
+                            <span class="numb-text">
+                                Happy Users
+                            </span>
+
+                        </div>
+
+                        <div class="number">
+
+                            <strong class="numbers-2">
+                                121
+                            </strong>
+
+                            <span class="numb-text">
+                                Issues Solved
+                            </span>
+
+                        </div>
+
+                        <div class="number">
+
+                            <strong class="numbers-3">
+                                159
+                            </strong>
+
+                            <span class="numb-text">
+                                Good Reviews
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section
+            class="tenth-container"
+            id="contactz"
+            aria-labelledby="contact-heading"
+        >
+
+            <div class="tenth-inner">
+
+                <div
+                    class="contact-us"
+                    id="contact"
+                >
+
+                    <p>
+                        CONTACT
+                    </p>
+
+                    <h2 id="contact-heading">
+                        Get In Touch Using The Form
+                    </h2>
+
+                    <p class="contact-p">
+                        You can stop by our office for a cup of coffee
+                        and use the contact form below for any questions
+                        and inquiries.
+                    </p>
+
+                    <address>
+
+                        <div class="addressLine">
+
+                            <span aria-hidden="true">
+                                📍
+                            </span>
+
+                            <p>
+                                22nd Innovative Street,
+                                San Francisco, CA 94043, USA.
+                            </p>
+
+                        </div>
+
+                        <div class="phoneLines">
+
+                            <div class="phoneLine">
+
+                                <span aria-hidden="true">
+                                    ☎
+                                </span>
+
+                                <a href="tel:+8172022126">
+                                    +81 720 22 126
+                                </a>
+
+                            </div>
+
+                            <div class="phoneLine">
+
+                                <span aria-hidden="true">
+                                    ✉
+                                </span>
+
+                                <a href="mailto:office@aria.com">
+                                    office@aria.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </address>
+
+                </div>
+
+                <div class="contact-form-container">
+
+                    <form
+                        action="#"
+                        method="post"
+                        id="contactForm"
+                    >
+
+                        <div class="form-group2">
+
+                            <label for="contact-name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control2"
+                                id="contact-name"
+                                name="name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group2">
+
+                            <label for="contact-email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control2"
+                                id="contact-email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group2">
+
+                            <label for="contact-message">
+                                Your message
+                            </label>
+
+                            <textarea
+                                id="contact-message"
+                                name="message"
+                                class="form-control2"
+                                rows="6"
+                                required
+                            ></textarea>
+
+                        </div>
+
+                        <div class="form-group2 checkbox-group2">
+
+                            <input
+                                type="checkbox"
+                                id="contactTerms"
+                                name="terms"
+                                required
+                            >
+
+                            <label for="contactTerms">
+
+                                I agree with Aria's
+                                <a href="/privacy-policy.html">
+                                    Privacy Policy
+                                </a>
+                                and
+                                <a href="/terms.html">
+                                    Terms & Conditions
+                                </a>.
+
+                            </label>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn-submit-contact"
+                        >
+                            Submit message
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="eleventh-container">
+
+        <div class="eleventh-in">
+
+            <div class="eleventh-inner">
+
+                <div class="few-words">
+
+                    <h2>
+                        Few Words About Aria
+                    </h2>
+
+                    <p>
+                        We're passionate about delivering the best business
+                        growth services for companies just starting out as
+                        startups or industry players that have established
+                        their market position.
+                    </p>
+
+                </div>
+
+                <nav
+                    class="linksz"
+                    aria-label="Footer links"
+                >
+
+                    <h2>
+                        Links
+                    </h2>
+
+                    <a href="/terms.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="/privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                </nav>
+
+                <nav
+                    class="tools"
+                    aria-label="Tools"
+                >
+
+                    <h2>
+                        Tools
+                    </h2>
+
+                    <a href="#">
+                        Business Growth
+                    </a>
+
+                    <a href="#">
+                        Influencers
+                    </a>
+
+                    <a href="#">
+                        Optimizer
+                    </a>
+
+                </nav>
+
+                <nav
+                    class="partners"
+                    aria-label="Partners"
+                >
+
+                    <h2>
+                        Partners
+                    </h2>
+
+                    <a href="#">
+                        Unicorns
+                    </a>
+
+                    <a href="#">
+                        Staff Manager
+                    </a>
+
+                    <a href="#">
+                        Association
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <div class="copy-right">
+
+                <p>
+                    &copy; 2026 Aria. Designed and developed by
+                    Olayiwola Stephen.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/swiper.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+    <script>
+        /*
+         * PAGE LOADING
+         *
+         * The loader remains visible until:
+         * 1. DOM is ready
+         * 2. fonts are ready
+         * 3. important images are loaded
+         * 4. page load event has fired
+         *
+         * Lazy-loaded images are deliberately NOT waited for.
+         * Otherwise the loader could remain visible for a very long time.
+         */
+
+        (() => {
+            const loader = document.getElementById("page-loader");
+
+            const importantImages = [
+                ...document.querySelectorAll(
+                    "img:not([loading='lazy']), video[poster]"
+                )
+            ];
+
+            const waitForImage = (element) => {
+                return new Promise((resolve) => {
+
+                    if (
+                        element.tagName === "VIDEO" &&
+                        element.readyState >= 2
+                    ) {
+                        resolve();
+                        return;
+                    }
+
+                    if (
+                        element.tagName === "IMG" &&
+                        element.complete
+                    ) {
+                        resolve();
+                        return;
+                    }
+
+                    const done = () => {
+                        element.removeEventListener("load", done);
+                        element.removeEventListener("error", done);
+                        resolve();
+                    };
+
+                    element.addEventListener("load", done, {
+                        once: true
+                    });
+
+                    element.addEventListener("error", done, {
+                        once: true
+                    });
+
+                    /*
+                     * Don't allow a broken asset to keep
+                     * the entire website behind the loader.
+                     */
+                    setTimeout(resolve, 5000);
+                });
+            };
+
+            const waitForFonts = async () => {
+
+                if (
+                    document.fonts &&
+                    document.fonts.ready
+                ) {
+                    try {
+                        await document.fonts.ready;
+                    } catch {
+                        // Continue even if fonts fail.
+                    }
+                }
+            };
+
+            const hideLoader = async () => {
+
+                await Promise.all([
+                    waitForFonts(),
+                    ...importantImages.map(waitForImage)
+                ]);
+
+                /*
+                 * Ensure the browser has painted the page.
+                 */
+                requestAnimationFrame(() => {
+
+                    requestAnimationFrame(() => {
+
+                        loader.classList.add("is-hidden");
+
+                        document.documentElement.classList.remove(
+                            "is-loading"
+                        );
+
+                        document.body.classList.remove(
+                            "is-loading"
+                        );
+
+                        loader.setAttribute(
+                            "aria-hidden",
+                            "true"
+                        );
+
+                    });
+
+                });
+            };
+
+            if (document.readyState === "complete") {
+                hideLoader();
+            } else {
+                window.addEventListener(
+                    "load",
+                    hideLoader,
+                    { once: true }
+                );
+            }
+
+        })();
+
+
+        /*
+         * MOBILE NAVIGATION
+         */
+
+        (() => {
+
+            const menu = document.getElementById("menu");
+            const sidenav = document.getElementById("sidenav");
+            const closeMenu = document.getElementById("close-menu");
+
+            if (!menu || !sidenav || !closeMenu) {
+                return;
+            }
+
+            const openMenu = () => {
+
+                sidenav.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                menu.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                document.body.classList.add(
+                    "menu-open"
+                );
+
+                closeMenu.focus();
+            };
+
+            const closeNav = () => {
+
+                sidenav.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                menu.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                document.body.classList.remove(
+                    "menu-open"
+                );
+
+                menu.focus();
+            };
+
+            menu.addEventListener(
+                "click",
+                openMenu
+            );
+
+            closeMenu.addEventListener(
+                "click",
+                closeNav
+            );
+
+            sidenav
+                .querySelectorAll("a")
+                .forEach((link) => {
+
+                    link.addEventListener(
+                        "click",
+                        closeNav
+                    );
+
+                });
+
+            document.addEventListener(
+                "keydown",
+                (event) => {
+
+                    if (
+                        event.key === "Escape" &&
+                        menu.getAttribute(
+                            "aria-expanded"
+                        ) === "true"
+                    ) {
+                        closeNav();
+                    }
+
+                }
+            );
+
+        })();
+
+
+        /*
+         * SWIPER
+         *
+         * Respect reduced-motion preference.
+         */
+
+        window.addEventListener("load", () => {
+
+            if (
+                typeof Swiper === "undefined"
+            ) {
+                return;
+            }
+
+            const prefersReducedMotion =
+                window.matchMedia(
+                    "(prefers-reduced-motion: reduce)"
+                ).matches;
+
+            new Swiper(".card-slider", {
+
+                loop: true,
+
+                autoplay: prefersReducedMotion
+                    ? false
+                    : {
+                        delay: 4000,
+                        disableOnInteraction: false
+                    },
+
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+
+                slidesPerView: 1,
+
+                spaceBetween: 30,
+
+                breakpoints: {
+
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40
+                    },
+
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 70
+                    }
+
+                }
+
+            });
+
+        });
 
     </script>
 
-
-
-
- </body>
- </html> 
+</body>
+</html>
