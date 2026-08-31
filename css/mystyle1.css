@@ -20,6 +20,20 @@ html{
     box-sizing: border-box;
 }
 
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    z-index: 9999;
+    padding: 10px 15px;
+    background: #14bf98;
+    color: #fff;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
 .header-container {
     position: relative;
     width: 100%;
