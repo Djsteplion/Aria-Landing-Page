@@ -49,9 +49,4 @@ Open `index.html` in your browser, or use VS Code Live Server for local developm
 
 The project has been refined with a focus on semantic HTML, keyboard navigation, accessible controls, meaningful image alternatives, responsive media, and reduced unnecessary page overhead.
 
-## Author
 
-**Olayiwola Stephen**
-Frontend Developer
-
-GitHub: [@Djsteplion](https://github.com/Djsteplion)
